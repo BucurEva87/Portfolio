@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
 
 :root {
-  --primary-color: #1A2236;
+  --primary-color: #1a2236;
   --secondary-color: #fff;
 }
 
@@ -34,6 +34,7 @@ body {
 #main-header > nav {
   margin-right: 1.6rem;
 }
+
 #main-header > nav ul {
   list-style-type: none;
 }
@@ -46,14 +47,17 @@ body {
   flex-direction: column;
   justify-content: space-around;
 }
+
 #hero h1 {
   font: 5rem/100% 'Playfair Display', serif;
 }
+
 #hero p {
   font: 1.4rem/2.1rem 'Poppins', sans-serif;
   letter-spacing: -0.01em;
 }
 
+/* Primary button (dark) */
 a.button {
   width: 100%;
   height: 5rem;
@@ -64,11 +68,13 @@ a.button {
   display: block;
   cursor: pointer;
 }
+
 a.button:hover {
   background-color: var(--secondary-color);
   color: var(--primary-color);
   border: 0.1rem solid var(--primary-color);
 }
+
 a.button:active {
   border: 0.3rem solid var(--primary-color);
   line-height: 4.4rem;
