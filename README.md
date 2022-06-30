@@ -4,7 +4,7 @@
 
 > Week 1, day 3 Microverse Portofolio project.
 First two sections of the mobile website.
-Using Template 4 from Figma.
+Using Template 5 from Figma.
 
 
 ## Built With
@@ -13,6 +13,9 @@ Using Template 4 from Figma.
 - Flexbox with mobile-first design in mind
 - Webhint, Styleint
 
+## Live Demo
+
+[Live Demo](https://bucureva87.github.io/Portofolio/)
 ## Author
 
 👤 **Bucur Liviu-Emanuel (Eva)**
