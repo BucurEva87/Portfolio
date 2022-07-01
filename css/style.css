@@ -21,7 +21,6 @@ body {
   min-width: 32rem;
   max-width: 50rem;
   margin: 0 auto;
-  /* border: 1px solid red; */
 }
 
 #main-header {
@@ -180,19 +179,18 @@ section > .grid-container {
   filter: brightness(0) saturate(100%) invert(9%) sepia(8%) saturate(4066%) hue-rotate(185deg) brightness(96%) contrast(90%);
 }
 
-#about h1 {
-  padding-left: 1.6rem;
+#about {
+  padding: 0 1.6rem 2rem 1.6rem;
 }
 
 #about p {
-  padding: 2rem 1.6rem 3.2rem 1.6rem;
+  margin-top: 2rem;
+  margin-bottom: 3.2rem;
   font: 400 1.4rem/2.1rem 'Poppins', sans-serif;
 }
 
 #about a.button.primary-dark {
-  width: calc(100% - 3.2rem);
   margin-bottom: 4rem;
-  margin-left: 1.6rem;
 }
 
 #about a.button.primary-dark:hover object {
@@ -202,7 +200,7 @@ section > .grid-container {
 #about .grid-container {
   grid-template-columns: 3;
   justify-content: center;
-  padding-bottom: 5rem;
+  margin-bottom: 5rem;
 }
 
 #about a.button object {
