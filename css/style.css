@@ -169,6 +169,13 @@ section > .grid-container {
   text-decoration: none;
 }
 
+#about a.button object {
+  width: 2.4rem;
+  height: 2.4rem;
+  vertical-align: middle;
+  margin-left: 2rem;
+}
+
 #projects a.button.secondary-dark object {
   margin-left: 1.2rem;
   width: 2.057rem;
@@ -201,13 +208,6 @@ section > .grid-container {
   grid-template-columns: 3;
   justify-content: center;
   margin-bottom: 5rem;
-}
-
-#about a.button object {
-  width: 2.4rem;
-  height: 2.4rem;
-  vertical-align: middle;
-  margin-left: 2rem;
 }
 
 #about .grid-container article {
