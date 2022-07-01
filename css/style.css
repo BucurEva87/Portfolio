@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600;800&display=swap');
 
 :root {
   --primary-color: #1a2236;
@@ -18,13 +18,13 @@ html {
 }
 
 body {
-  width: 32rem;
+  min-width: 32rem;
+  max-width: 50rem;
   margin: 0 auto;
 }
 
 #main-header {
   height: 7.4rem;
-  margin-bottom: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,43 +44,207 @@ body {
   list-style-type: none;
 }
 
+section {
+  margin-top: 3rem;
+  color: var(--primary-color);
+}
+
 #hero {
   height: 46rem; /* height needed for the flex container in order to use space-around */
-  padding: 0 1.6rem 2rem 1.6rem;
-  color: var(--primary-color);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding: 0 1.6rem 2rem 1.6rem;
 }
 
-#hero h1 {
+h1 {
   font: 5rem/100% 'Playfair Display', serif;
 }
 
 #hero p {
-  font: 1.4rem/2.1rem 'Poppins', sans-serif;
+  font: normal 1.4rem/2.1rem 'Poppins', sans-serif;
   letter-spacing: -0.01em;
 }
 
-/* Primary button (dark) */
 a.button {
   width: 100%;
   height: 5rem;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
   font: 1.6rem/5rem 'Poppins', sans-serif;
   text-align: center;
   display: block;
   cursor: pointer;
+  text-decoration: none;
 }
 
-a.button:hover {
+/* Primary button (dark) */
+a.button.primary-dark {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+a.button.primary-dark:hover {
   background-color: var(--secondary-color);
   color: var(--primary-color);
   border: 0.1rem solid var(--primary-color);
 }
 
-a.button:active {
+a.button.primary-dark:active {
   border: 0.3rem solid var(--primary-color);
   line-height: 4.4rem;
+}
+
+/* No such example is specified in the Figma buttons section,
+but clearly this is a button with black background and white
+text, and it should have been the dark version of the
+secondary type of button, so I implemented it */
+a.button.secondary-dark {
+  width: 19.8rem;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 0.1rem solid var(--secondary-color);
+  margin: 2rem;
+}
+
+a.button.secondary-dark:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+a.button.secondary-dark:active {
+  border: 0.3rem solid var(--primary-color);
+  line-height: 4.6rem;
+}
+
+#geometry {
+  width: 100%;
+  height: 16rem;
+  background: var(--secondary-color) url('../img/image_geometry_2geometry2.svg') no-repeat center;
+  background-size: 100% 100%;
+}
+
+#projects h1 {
+  padding-left: 1.6rem;
+}
+
+section > .grid-container {
+  margin-top: 3.2rem;
+  display: grid;
+}
+
+#projects .grid-container {
+  grid-template-columns: 6;
+}
+
+#projects .grid-container article {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+}
+
+#projects .grid-container article img {
+  width: 100%;
+}
+
+#projects .grid-container article h2 {
+  color: var(--secondary-color);
+  font: 300 2rem/1.6rem 'Poppins', sans-serif;
+  padding: 2rem 3.6rem 1.6rem 2rem;
+}
+
+#projects .grid-container article ul {
+  list-style-type: none;
+  padding-left: 2rem;
+  display: flex;
+}
+
+#projects .grid-container article ul li {
+  padding: 0.6rem 1rem;
+  background-color: #98dede;
+  margin-right: 2rem;
+}
+
+#projects .grid-container a.tag {
+  color: var(--primary-color);
+  font: 300 1.033rem/0.827rem 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+#about a.button object {
+  width: 2.4rem;
+  height: 2.4rem;
+  vertical-align: middle;
+  margin-left: 2rem;
+}
+
+#projects a.button.secondary-dark object {
+  margin-left: 1.2rem;
+  width: 2.057rem;
+  height: 1.535rem;
+}
+
+#projects a.button.secondary-dark:hover object {
+  filter: brightness(0) saturate(100%) invert(9%) sepia(8%) saturate(4066%) hue-rotate(185deg) brightness(96%) contrast(90%);
+}
+
+#about {
+  padding: 0 1.6rem 2rem 1.6rem;
+}
+
+#about p {
+  margin-top: 2rem;
+  margin-bottom: 3.2rem;
+  font: 400 1.4rem/2.1rem 'Poppins', sans-serif;
+}
+
+#about a.button.primary-dark {
+  margin-bottom: 4rem;
+}
+
+#about a.button.primary-dark:hover object {
+  filter: brightness(0) saturate(100%) invert(9%) sepia(8%) saturate(4066%) hue-rotate(185deg) brightness(96%) contrast(90%);
+}
+
+#about .grid-container {
+  grid-template-columns: 3;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+#about .grid-container article {
+  width: 28.9rem;
+  height: 28.9rem;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  margin-bottom: 1.6rem;
+  padding-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--secondary-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+#card-languages {
+  background: #1c52ba url('../img/hash.svg');
+}
+
+#card-frameworks {
+  background: #e2505c url('../img/ic_framework.svg');
+}
+
+#card-skills {
+  background: #febf52 url('../img/ic_skills.svg');
+}
+
+#about .grid-container article h2 {
+  margin-top: 5rem;
+  font: 800 2rem/3rem 'Poppins', sans-serif;
+}
+
+#about .grid-container article ul {
+  margin-top: 2.1rem;
+}
+
+#about .grid-container article ul li {
+  font: 600 1.8rem/2.7rem 'Poppins', sans-serif;
+  letter-spacing: -5.25%;
 }
