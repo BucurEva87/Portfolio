@@ -152,13 +152,13 @@
 			<ul>
 				<li>
 					<span>Your name</span>
-					<input type="text" name="username" required value="Anastasia">
+					<input type="text" name="username" required maxlength="30" value="Anastasia" placeholder="Please provide your username">
 				</li>
 				<li>
 					<span>Your email</span>
-					<input type="email" name="user_email" required placeholder="user@abc.com">
+					<input type="email" name="user_email" required placeholder="Please provide your email address">
 				</li>
-				<li><textarea name="message" required placeholder="Write your message here"></textarea></li>
+				<li><textarea name="message" required maxlength="500" placeholder="Write your message here"></textarea></li>
 				<li><button type="submit" class="button primary-dark">Get in Touch</button></li>
 			</ul>
 		</form>
