@@ -40,6 +40,16 @@ body {
   margin-right: 1.6rem;
 }
 
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+#contact ul {
+  list-style: none;
+}
+
 #main-header > nav ul {
   list-style-type: none;
 }
@@ -59,6 +69,9 @@ section {
 
 h1 {
   font: 5rem/100% 'Playfair Display', serif;
+  padding-top: 10.3rem;
+  width: 100%;
+  margin-bottom: 5.6rem;
 }
 
 #hero p {
@@ -66,7 +79,7 @@ h1 {
   letter-spacing: -0.01em;
 }
 
-a.button {
+.button {
   width: 100%;
   height: 5rem;
   font: 1.6rem/5rem 'Poppins', sans-serif;
@@ -77,18 +90,18 @@ a.button {
 }
 
 /* Primary button (dark) */
-a.button.primary-dark {
+.button.primary-dark {
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
 
-a.button.primary-dark:hover {
+.button.primary-dark:hover {
   background-color: var(--secondary-color);
   color: var(--primary-color);
   border: 0.1rem solid var(--primary-color);
 }
 
-a.button.primary-dark:active {
+.button.primary-dark:active {
   border: 0.3rem solid var(--primary-color);
   line-height: 4.4rem;
 }
@@ -97,7 +110,7 @@ a.button.primary-dark:active {
 but clearly this is a button with black background and white
 text, and it should have been the dark version of the
 secondary type of button, so I implemented it */
-a.button.secondary-dark {
+.button.secondary-dark {
   width: 19.8rem;
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -105,12 +118,12 @@ a.button.secondary-dark {
   margin: 2rem;
 }
 
-a.button.secondary-dark:hover {
+.button.secondary-dark:hover {
   background-color: var(--secondary-color);
   color: var(--primary-color);
 }
 
-a.button.secondary-dark:active {
+.button.secondary-dark:active {
   border: 0.3rem solid var(--primary-color);
   line-height: 4.6rem;
 }
@@ -157,6 +170,10 @@ section > .grid-container {
   display: flex;
 }
 
+#contact ul li {
+  position: relative;
+}
+
 #projects .grid-container article ul li {
   padding: 0.6rem 1rem;
   background-color: #98dede;
@@ -167,6 +184,18 @@ section > .grid-container {
   color: var(--primary-color);
   font: 300 1.033rem/0.827rem 'Poppins', sans-serif;
   text-decoration: none;
+}
+
+footer a object {
+  cursor: pointer;
+}
+
+footer > a object {
+  margin-left: 1.5rem;
+}
+
+footer ul li a:hover object {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(47%) saturate(1254%) hue-rotate(153deg) brightness(95%) contrast(80%);
 }
 
 #about a.button object {
@@ -247,4 +276,70 @@ section > .grid-container {
 #about .grid-container article ul li {
   font: 600 1.8rem/2.7rem 'Poppins', sans-serif;
   letter-spacing: -5.25%;
+}
+
+#contact-header {
+  height: 7.4rem;
+  background: var(--secondary-color) url("../img/image_geometry_1squares.svg") no-repeat left top;
+}
+
+#contact {
+  padding-left: 1.8rem;
+  padding-right: 1.4rem;
+  color: var(--primary-color);
+}
+
+#contact p {
+  font: 400 1.4rem/2.1rem 'Poppins', sans-serif;
+  margin-bottom: 3.2rem;
+}
+
+#contact h1 {
+  font: 400 5rem/5rem 'Playfair Display', serif;
+  margin-bottom: 2rem;
+  padding-top: 3.2rem;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  background-color: white;
+  border-radius: 0.4rem;
+  font: 400 1.4rem/2.1rem 'Poppins', sans-serif;
+  color: var(--primary-color);
+  padding: 1.6rem 1.6rem 0.8rem 1.6rem;
+  margin-bottom: 2rem;
+}
+
+#contact form input {
+  line-height: 2.4rem;
+  margin-bottom: 0.8rem;
+}
+
+#contact ul li span {
+  position: absolute;
+  left: 1.6rem;
+  top: 0.4rem;
+  font: 400 1rem/1.5rem 'Poppins', sans-serif;
+  color: #7d7c84;
+}
+
+footer {
+  background: var(--primary-color);
+  padding: 0 1.6rem;
+  margin-top: 6.4rem;
+}
+
+footer a {
+  display: block;
+  font: 500 1.6rem/2.4rem 'Poppins', sans-serif;
+  color: #92dcdc;
+  padding-top: 3.2rem;
+  padding-bottom: 3.05rem;
+  text-decoration: none;
+}
+
+footer > a {
+  display: flex;
+  align-items: center;
 }
