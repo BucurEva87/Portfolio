@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Page</title>
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --primary-color: #1a2236;
+      --secondary-color: #fff;
+    }
+    html {
+      font-size: 10px;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--secondary-color);
+    }
+    a {
+      text-decoration: none;
+    }
+    a.button {
+      padding: 1.2rem;
+      text-align: center;
+      background-color: var(--primary-color);
+      font-size: 2.4rem;
+      color: var(--secondary-color);
+    }
+    a.button:hover {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      border: 0.1rem solid var(--primary-color);
+    }
+    a.button object {
+      padding-left: 1rem;
+    }
+    a.button:hover object {
+      filter: brightness(0) saturate(100%) invert(20%) sepia(71%) saturate(6103%) hue-rotate(354deg) brightness(111%) contrast(134%);
+    }
+    button[data-name$="2"] {
+      padding: 20rem;
+    }
+  </style>
+</head>
+<body>
+  
+  <a href="#" class="button">
+    Try some SVG magic <object data="img/ic_download.svg"></object>
+  </a>
+
+  <button data-name="something else 2">Whatever</button>
+  <button data-name="something else">Another thing</button>
+
+</body>
+</html>
