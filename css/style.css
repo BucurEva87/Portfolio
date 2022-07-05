@@ -290,10 +290,12 @@ section > .grid-container {
   font: 400 1.4rem/2.1rem 'Poppins', sans-serif;
   color: var(--primary-color);
   padding: 1.6rem 1.6rem 0.8rem 1.6rem;
+  margin-bottom: 2rem;
 }
 
 #contact form input {
   line-height: 2.4rem;
+  margin-bottom: 0.8rem;
 }
 
 #contact ul li span {
@@ -302,4 +304,35 @@ section > .grid-container {
   top: 0.4rem;
   font: 400 1rem/1.5rem 'Poppins', sans-serif;
   color: #7D7C84;
+}
+
+footer {
+  background: var(--primary-color);
+  padding: 0 1.6rem;
+  margin-top: 6.4rem;
+
+}
+
+footer a {
+  display: block;
+  font: 500 1.6rem/2.4rem 'Poppins',sans-serif;
+  color: #92dcdc;
+  padding-top: 3.2rem;
+  padding-bottom: 3.05rem;
+  text-decoration: none;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+footer > a {
+  display: flex;
+  align-items: center;
+}
+
+footer > a object {
+  margin-left: 1.5rem;
 }
