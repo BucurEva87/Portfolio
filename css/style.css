@@ -59,6 +59,10 @@ section {
 
 h1 {
   font: 5rem/100% 'Playfair Display', serif;
+  padding-top: 10.3rem;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 5.6rem;
 }
 
 #hero p {
@@ -247,4 +251,23 @@ section > .grid-container {
 #about .grid-container article ul li {
   font: 600 1.8rem/2.7rem 'Poppins', sans-serif;
   letter-spacing: -5.25%;
+}
+
+#contact {
+  background: #6070FF url('../img/contact-form-shapes-mobile.png');
+  padding: 0 1.6rem 2rem 1.6rem;
+  color: var(--secondary-color);
+}
+
+#contact ul {
+  list-style: none;
+}
+
+#contact p {
+  font: 400 2rem/2.8rem 'Poppins', sans-serif;
+  padding: 0 2.4rem;
+}
+
+#contact h1 {
+  font: 700 4rem/5.2rem 'Poppins', sans-serif;
 }
