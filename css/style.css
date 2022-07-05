@@ -69,7 +69,7 @@ h1 {
   letter-spacing: -0.01em;
 }
 
-a.button {
+.button {
   width: 100%;
   height: 5rem;
   font: 1.6rem/5rem 'Poppins', sans-serif;
@@ -80,18 +80,18 @@ a.button {
 }
 
 /* Primary button (dark) */
-a.button.primary-dark {
+.button.primary-dark {
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
 
-a.button.primary-dark:hover {
+.button.primary-dark:hover {
   background-color: var(--secondary-color);
   color: var(--primary-color);
   border: 0.1rem solid var(--primary-color);
 }
 
-a.button.primary-dark:active {
+.button.primary-dark:active {
   border: 0.3rem solid var(--primary-color);
   line-height: 4.4rem;
 }
@@ -100,7 +100,7 @@ a.button.primary-dark:active {
 but clearly this is a button with black background and white
 text, and it should have been the dark version of the
 secondary type of button, so I implemented it */
-a.button.secondary-dark {
+.button.secondary-dark {
   width: 19.8rem;
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -108,12 +108,12 @@ a.button.secondary-dark {
   margin: 2rem;
 }
 
-a.button.secondary-dark:hover {
+.button.secondary-dark:hover {
   background-color: var(--secondary-color);
   color: var(--primary-color);
 }
 
-a.button.secondary-dark:active {
+.button.secondary-dark:active {
   border: 0.3rem solid var(--primary-color);
   line-height: 4.6rem;
 }
@@ -252,8 +252,12 @@ section > .grid-container {
   letter-spacing: -5.25%;
 }
 
+#contact-header {
+  height: 7.4rem;
+  background: var(--secondary-color) url("../img/image_geometry_1squares.svg") no-repeat left top;
+}
+
 #contact {
-  background: #6070FF url('../img/contact-form-shapes-mobile.png');
   padding-left: 1.8rem;
   padding-right: 1.4rem;
   color: var(--primary-color);
@@ -261,6 +265,10 @@ section > .grid-container {
 
 #contact ul {
   list-style: none;
+}
+
+#contact ul li {
+  position: relative;
 }
 
 #contact p {
@@ -271,18 +279,27 @@ section > .grid-container {
 #contact h1 {
   font: 400 5rem/5rem 'Playfair Display', serif;
   margin-bottom: 2rem;
+  padding-top: 3.2rem;
 }
 
-#contact form > *:not(button) {
+#contact form input,
+#contact form textarea {
   width: 100%;
   background-color: white;
   border-radius: 0.4rem;
   font: 400 1.4rem/2.1rem 'Poppins', sans-serif;
   color: var(--primary-color);
-  padding: 2.3rem 1.6rem 0.8rem 1.6rem !important;
+  padding: 1.6rem 1.6rem 0.8rem 1.6rem;
 }
 
 #contact form input {
-  height: 4.8rem;
-  line-height: 4.8rem;
+  line-height: 2.4rem;
+}
+
+#contact ul li span {
+  position: absolute;
+  left: 1.6rem;
+  top: 0.4rem;
+  font: 400 1rem/1.5rem 'Poppins', sans-serif;
+  color: #7D7C84;
 }
