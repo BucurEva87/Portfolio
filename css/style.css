@@ -60,7 +60,6 @@ section {
 h1 {
   font: 5rem/100% 'Playfair Display', serif;
   padding-top: 10.3rem;
-  text-align: center;
   width: 100%;
   margin-bottom: 5.6rem;
 }
@@ -255,8 +254,9 @@ section > .grid-container {
 
 #contact {
   background: #6070FF url('../img/contact-form-shapes-mobile.png');
-  padding: 0 1.6rem 2rem 1.6rem;
-  color: var(--secondary-color);
+  padding-left: 1.8rem;
+  padding-right: 1.4rem;
+  color: var(--primary-color);
 }
 
 #contact ul {
@@ -264,10 +264,25 @@ section > .grid-container {
 }
 
 #contact p {
-  font: 400 2rem/2.8rem 'Poppins', sans-serif;
-  padding: 0 2.4rem;
+  font: 400 1.4rem/2.1rem 'Poppins', sans-serif;
+  margin-bottom: 3.2rem;
 }
 
 #contact h1 {
-  font: 700 4rem/5.2rem 'Poppins', sans-serif;
+  font: 400 5rem/5rem 'Playfair Display', serif;
+  margin-bottom: 2rem;
+}
+
+#contact form > *:not(button) {
+  width: 100%;
+  background-color: white;
+  border-radius: 0.4rem;
+  font: 400 1.4rem/2.1rem 'Poppins', sans-serif;
+  color: var(--primary-color);
+  padding: 2.3rem 1.6rem 0.8rem 1.6rem !important;
+}
+
+#contact form input {
+  height: 4.8rem;
+  line-height: 4.8rem;
 }
