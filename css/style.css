@@ -333,6 +333,14 @@ footer > a {
   align-items: center;
 }
 
+footer a object {
+  cursor: pointer;
+}
+
 footer > a object {
   margin-left: 1.5rem;
+}
+
+footer ul li a:hover object {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(47%) saturate(1254%) hue-rotate(153deg) brightness(95%) contrast(80%);
 }
