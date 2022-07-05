@@ -2,8 +2,8 @@
 
 # Portofolio
 
-> Week 1, day 3 Microverse Portofolio project.
-First two sections of the mobile website.
+> Week 2, day 2 Microverse Portofolio project.
+First two sections of the mobile website plus the contact me and footer sections.
 Using Template 5 from Figma.
 
 
@@ -23,6 +23,12 @@ Using Template 5 from Figma.
 - GitHub: [@BucurEva87](https://github.com/BucurEva87)
 - Twitter: [@BucurEva](https://twitter.com/BucurEva)
 - LinkedIn: [Eva Lavinia Bucur](https://www.linkedin.com/in/eva-lavinia-bucur-89626b1b7)
+
+👤 **Edmund Yaw Debrah**
+
+- GitHub: [@codewithed](https://github.com/codewithed)
+- Twitter: [@meet__ed](https://twitter.com/meed__ed)
+- LinkedIn [Edmund Yaw Debrah](https://www.linkedin.com/in/edmund-yaw-debrah-054461235)
 
 ## 🤝 Contributing
 
