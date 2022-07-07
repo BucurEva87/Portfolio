@@ -178,6 +178,13 @@ section > .grid-container {
   padding: 0.6rem 1rem;
   background-color: #98dede;
   margin-right: 2rem;
+  transition: all 1s;
+}
+
+#projects .grid-container article ul li:hover {
+  transform: rotate(10deg) scale(1.4);
+  background-color: orangered;
+  color: black;
 }
 
 #projects .grid-container a.tag {
