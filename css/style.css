@@ -154,7 +154,7 @@ section > .grid-container {
   background-color: var(--primary-color);
 }
 
-#projects .grid-container article img{
+#projects .grid-container article img {
   width: 100%;
   transition: transform 0.5s;
 }
@@ -226,8 +226,6 @@ footer ul li a:hover object {
 #projects a.button:hover {
   animation: shake infinite 1s;
 } 
-
-
 
 @keyframes shake {
   from {
