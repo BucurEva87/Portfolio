@@ -186,6 +186,11 @@ section > .grid-container {
   transition: all 1s;
 }
 
+#about .grid-container article ul li {
+  font: 600 1.8rem/2.7rem 'Poppins', sans-serif;
+  letter-spacing: -5.25%;
+}
+
 #projects .grid-container article ul li:hover {
   transform: rotate(10deg) scale(1.4);
   background-color: orangered;
@@ -225,15 +230,17 @@ footer ul li a:hover object {
 
 #projects a.button:hover {
   animation: shake infinite 1s;
-} 
+}
 
 @keyframes shake {
   from {
     transform: translateX(-1rem);
   }
+
   50% {
     transform: translateX(2rem);
   }
+
   to {
     transform: translateX(-1rem);
   }
@@ -299,11 +306,6 @@ footer ul li a:hover object {
 
 #about .grid-container article ul {
   margin-top: 2.1rem;
-}
-
-#about .grid-container article ul li {
-  font: 600 1.8rem/2.7rem 'Poppins', sans-serif;
-  letter-spacing: -5.25%;
 }
 
 #contact-header {
