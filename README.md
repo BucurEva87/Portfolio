@@ -30,6 +30,10 @@ Using Template 5 from Figma.
 - Twitter: [@meet__ed](https://twitter.com/meed__ed)
 - LinkedIn [Edmund Yaw Debrah](https://www.linkedin.com/in/edmund-yaw-debrah-054461235)
 
+## Contributions
+
+In the Peer Programming section of week 2, day 4 I contributed to [Edmund Yaw Debrah's project portfolio-website](https://github.com/codewithed/portfolio-website).
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
