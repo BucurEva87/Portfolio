@@ -55,10 +55,6 @@ p {
   font: normal 1.4rem/2.1rem var(--font-family2);
 }
 
-/* object {
-  cursor: pointer;
-} */
-
 /* Main classes */
 .button {
   height: 5rem;
