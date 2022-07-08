@@ -162,8 +162,12 @@ secondary type of button, so I implemented it */
 #projects .grid-container article {
   display: flex;
   flex-direction: column;
-  background-color: var(--primary-color);
+}
+
+#projects .grid-container article .info {
   padding-bottom: 2rem;
+  background-color: var(--primary-color);
+  margin: -0.2rem;
 }
 
 #projects .grid-container article img {
@@ -209,6 +213,7 @@ secondary type of button, so I implemented it */
   width: 17.8rem;
   margin-top: 2rem;
   margin-left: 2rem;
+  display: inline-block;
 }
 
 #projects a.button:hover {
@@ -380,4 +385,158 @@ footer ul {
 
 footer ul li a:hover object {
   filter: brightness(0) saturate(100%) invert(97%) sepia(47%) saturate(1254%) hue-rotate(153deg) brightness(95%) contrast(80%);
+}
+
+@media only screen and (min-width: 768px) {
+  :root {
+    --desktop-padding-left-right: 16rem;
+  }
+
+  .desktop-visible {
+    display: unset;
+  }
+
+  .mobile-visible {
+    display: none;
+  }
+
+  body {
+    max-width: max-content;
+  }
+
+  a.button.primary-dark {
+    width: 25.4rem;
+  }
+
+  #main-header {
+    display: block;
+  }
+
+  #main-header nav ul {
+    height: 7.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #main-header nav ul li {
+    margin-left: 5rem;
+  }
+
+  #main-header nav ul li a {
+    font: normal 1.6rem/2.4rem var(--font-family2);
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+
+  #hero {
+    padding: 0 var(--desktop-padding-left-right);
+  }
+
+  #hero > * {
+    max-width: 48.4rem;
+  }
+
+  /* Remove animations and transitions */
+  #projects .grid-container article ul li,
+  #projects .grid-container article img{
+    transition: none;
+  }
+  #projects .grid-container article ul li:hover,
+  #projects .grid-container article img:hover {
+    transform: none;
+  }
+
+  #projects a.button:hover {
+    animation: none;
+  }
+  /* End of Remove animations and transitions */
+
+  #projects {
+    margin-top: 20.991rem;
+  }
+
+  #projects div.desktop-visible:not([class^="des"]) {
+    grid-area: title;
+    background: url('../img/backgrounds/dots.png') no-repeat right top;
+  }
+
+  #projects div.desktop-visible h1 {
+    display: inline-block;
+    font: normal 11rem/11rem var(--font-family1);
+    transform: rotate(-90deg) translate(calc(-39.8rem + 65%), -50%);
+  }
+
+  #projects .grid-container {
+    margin-top: 0;
+    grid-template-rows: 55.8rem 35.042rem 46.5rem 27rem;
+    grid-template-columns: 32.284% 23.258% 12.174% 32.284%;
+    grid-template-areas: 'title art1 art1 art1'
+                         'art2  des1 des2 des2'
+                         'art3  art3 des2 des2'
+                         'des3  des3 art4 art4';
+    width: 100vw;
+  }
+
+  #projects .grid-container > * {
+    width: 100%;
+    height: 100%;
+  }
+
+  article.art1 {
+    grid-area: art1;
+  }
+
+  article.art2 {
+    grid-area: art2;
+  }
+
+  article.art3 {
+    grid-area: art3;
+  }
+
+  article.art4 {
+    grid-area: art4;
+  }
+
+  .design1 {
+    grid-area: des1;
+  }
+
+  .design2 {
+    grid-area: des2;
+    background-color: blue;
+  }
+
+  .design3 {
+    grid-area: des3;
+  }
+}
+
+@media only screen and (min-width: 1038px) {
+  #hero {
+    position: relative;
+  }
+
+  #hero::after {
+    content: "";
+    background: url('../img/backgrounds/lateral-geometry-desktop.png') no-repeat right top;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: fadeIn 1s;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
 }
