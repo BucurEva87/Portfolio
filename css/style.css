@@ -197,6 +197,15 @@ secondary type of button, so I implemented it */
   transition-duration: 1s;
 }
 
+#contact ul li {
+  position: relative;
+}
+
+#about .grid-container article ul li {
+  font: 600 1.8rem/2.7rem var(--font-family2);
+  letter-spacing: -5.25%;
+}
+
 #projects .grid-container article ul li:hover {
   transform: rotate(5deg) scale(1.4);
   background-color: orangered;
@@ -234,6 +243,21 @@ secondary type of button, so I implemented it */
   }
 }
 
+#about .button object {
+  margin-left: 1.2rem;
+  vertical-align: middle;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+footer ul li a:hover object {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(47%) saturate(1254%) hue-rotate(153deg) brightness(95%) contrast(80%);
+}
+
 #projects a.button.secondary-dark object {
   margin-left: 1.2rem;
   width: 2.057rem;
@@ -257,9 +281,12 @@ secondary type of button, so I implemented it */
   margin-bottom: 4rem;
 }
 
-#about .button object {
-  margin-left: 1.2rem;
-  vertical-align: middle;
+footer a object {
+  cursor: pointer;
+}
+
+footer > a object {
+  margin-left: 1.5rem;
 }
 
 #projects .button.secondary-dark:hover object,
@@ -307,11 +334,6 @@ secondary type of button, so I implemented it */
   list-style-type: disc;
 }
 
-#about .grid-container article ul li {
-  font: 600 1.8rem/2.7rem var(--font-family2);
-  letter-spacing: -5.25%;
-}
-
 #contact-header {
   height: 7.4rem;
   background: var(--secondary-color) url("../img/backgrounds/logo.svg") no-repeat left top;
@@ -336,10 +358,6 @@ secondary type of button, so I implemented it */
 #contact form input {
   line-height: 2.4rem;
   margin-bottom: 0.8rem;
-}
-
-#contact ul li {
-  position: relative;
 }
 
 #contact ul li span {
@@ -370,24 +388,6 @@ footer > a {
   align-items: center;
 }
 
-footer a object {
-  cursor: pointer;
-}
-
-footer > a object {
-  margin-left: 1.5rem;
-}
-
-footer ul {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-}
-
-footer ul li a:hover object {
-  filter: brightness(0) saturate(100%) invert(97%) sepia(47%) saturate(1254%) hue-rotate(153deg) brightness(95%) contrast(80%);
-}
-
 @media only screen and (min-width: 768px) {
   :root {
     --desktop-padding-left-right: 16rem;
@@ -411,6 +411,20 @@ footer ul li a:hover object {
 
   #main-header {
     display: block;
+  }
+
+  footer ul {
+    width: 26.2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #contact ul {
+    display: grid;
+    grid-template-areas: 'fu fe' 'ft ft' 'fb fb';
+    column-gap: 3.5rem;
+    row-gap: 4.2rem;
+    width: 54.8rem;
   }
 
   #main-header nav ul {
@@ -443,9 +457,16 @@ footer ul li a:hover object {
     transition: none;
   }
 
+  #projects .grid-container article img {
+    width: 100%;
+    height: 102%;
+    margin-top: -0.35rem;
+  }
+
   #projects .grid-container article img:hover {
     transform: none;
   }
+
   /* End of Remove transitions of images in articles */
 
   #projects {
@@ -455,6 +476,14 @@ footer ul li a:hover object {
   #projects div.desktop-visible:not([class*="design"]) {
     grid-area: title;
     background: url('../img/backgrounds/dots.png') no-repeat right top;
+  }
+
+  #about h1 {
+    font: 400 11rem/11rem var(--font-family1);
+  }
+
+  #contact h1 {
+    font: normal 11rem/11rem var(--font-family1);
   }
 
   #projects div.desktop-visible h1 {
@@ -469,9 +498,9 @@ footer ul li a:hover object {
     grid-template-rows: 55.8rem 35.042rem 46.5rem 27rem;
     grid-template-columns: 32.284% 23.258% 12.174% 32.284%;
     grid-template-areas: 'title art1 art1 art1'
-                         'art2  des1 des2 des2'
-                         'art3  art3 des2 des2'
-                         'des3  des3 art4 art4';
+      'art2  des1 des2 des2'
+      'art3  art3 des2 des2'
+      'des3  des3 art4 art4';
     width: 99.24vw;
   }
 
@@ -509,6 +538,21 @@ footer ul li a:hover object {
     width: 80%;
   }
 
+  #projects .grid-container article .info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    padding-left: 6.25%;
+    padding-bottom: 0;
+    transition: height 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
   #projects .grid-container article.art5 {
     grid-area: des2;
     height: 48.8rem;
@@ -525,44 +569,23 @@ footer ul li a:hover object {
   .design1 {
     grid-area: des1;
     background: url('../img/backgrounds/dots.png') no-repeat left top,
-                url('../img/backgrounds/red_circle_half_left.png') no-repeat right top,
-                url('../img/backgrounds/teardrop.png') no-repeat right bottom;
+      url('../img/backgrounds/red_circle_half_left.png') no-repeat right top,
+      url('../img/backgrounds/teardrop.png') no-repeat right bottom;
   }
 
   .design2 {
     grid-area: des2;
     background: url('../img/backgrounds/red_circle_half_right.png') no-repeat left top,
-                url('../img/backgrounds/square_romb_yellow.png') no-repeat left 17.5rem,
-                url('../img/projects/project6.png') no-repeat right top,
-                url('../img/backgrounds/colored_diamonds.png') no-repeat 100% 84.46%,
-                url('../img/backgrounds/red_diamond.png') no-repeat left bottom;
+      url('../img/backgrounds/square_romb_yellow.png') no-repeat left 17.5rem,
+      url('../img/projects/project6.png') no-repeat right top,
+      url('../img/backgrounds/colored_diamonds.png') no-repeat 100% 84.46%,
+      url('../img/backgrounds/red_diamond.png') no-repeat left bottom;
   }
 
   .design3 {
     grid-area: des3;
     background: url('../img/backgrounds/blue_square_red_tear.png') no-repeat left top,
-                url('../img/backgrounds/yellow_tear.png') no-repeat right top;
-  }
-
-  #projects .grid-container article img {
-    width: 100%;
-    height: 102%;
-    margin-top: -0.35rem;
-  }
-
-  #projects .grid-container article .info {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 0;
-    padding-left: 6.25%;
-    padding-bottom: 0;
-    transition: height 1s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    overflow: hidden;
-    cursor: pointer;
+      url('../img/backgrounds/yellow_tear.png') no-repeat right top;
   }
 
   #projects .grid-container article:hover .info {
@@ -606,15 +629,11 @@ footer ul li a:hover object {
     margin-top: 3rem;
   }
 
-  #about h1 {
-    font: 400 11rem/11rem var(--font-family1);
-  }
-
   #about .grid-container {
     grid-area: g;
     display: grid;
     grid-template-areas: 'bb rb'
-                         'yb db';
+      'yb db';
     gap: 0;
   }
 
@@ -624,17 +643,17 @@ footer ul li a:hover object {
 
   #db {
     background: url('../img/backgrounds/dots.png') no-repeat center bottom,
-                url('../img/backgrounds/blue_square.png') no-repeat right 22%;
+      url('../img/backgrounds/blue_square.png') no-repeat right 22%;
   }
 
   #contact-header,
   #contact {
-    background-color: #F9F9FA;
+    background-color: #f9f9fa;
   }
 
   #contact {
     background: url('../img/backgrounds/blue_and_light_tear.png') no-repeat left top,
-                url('../img/backgrounds/bottom_most.png') no-repeat right bottom;
+      url('../img/backgrounds/bottom_most.png') no-repeat right bottom;
     padding: 0 44.8rem;
     padding-bottom: 13.5rem;
     display: flex;
@@ -642,19 +661,7 @@ footer ul li a:hover object {
     align-items: center
   }
 
-  #contact h1 {
-    font: normal 11rem/11rem var(--font-family1);
-  }
-
   #contact p {
-    width: 54.8rem;
-  }
-
-  #contact ul {
-    display: grid;
-    grid-template-areas: 'fu fe' 'ft ft' 'fb fb';
-    column-gap: 3.5rem;
-    row-gap: 4.2rem;
     width: 54.8rem;
   }
 
@@ -689,12 +696,6 @@ footer ul li a:hover object {
   footer {
     margin-top: 0;
     padding: 0 16rem;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  footer ul {
-    width: 26.2rem;
     display: flex;
     justify-content: space-between;
   }
