@@ -167,7 +167,7 @@ secondary type of button, so I implemented it */
 #projects .grid-container article .info {
   padding-bottom: 2rem;
   background-color: var(--primary-color);
-  margin: -0.2rem;
+  margin: -0.2rem 0;
 }
 
 #projects .grid-container article img {
@@ -304,6 +304,7 @@ secondary type of button, so I implemented it */
 
 #about .grid-container article ul {
   margin-top: 2.1rem;
+  list-style-type: disc;
 }
 
 #about .grid-container article ul li {
@@ -397,7 +398,7 @@ footer ul li a:hover object {
   }
 
   .mobile-visible {
-    display: none;
+    display: none !important;
   }
 
   body {
@@ -405,7 +406,7 @@ footer ul li a:hover object {
   }
 
   a.button.primary-dark {
-    width: 25.4rem;
+    width: 25.4rem !important;
   }
 
   #main-header {
@@ -437,26 +438,21 @@ footer ul li a:hover object {
     max-width: 48.4rem;
   }
 
-  /* Remove animations and transitions */
-  #projects .grid-container article ul li,
-  #projects .grid-container article img{
+  /* Remove transitions of images in articles */
+  #projects .grid-container article img {
     transition: none;
   }
-  #projects .grid-container article ul li:hover,
+
   #projects .grid-container article img:hover {
     transform: none;
   }
-
-  #projects a.button:hover {
-    animation: none;
-  }
-  /* End of Remove animations and transitions */
+  /* End of Remove transitions of images in articles */
 
   #projects {
     margin-top: 20.991rem;
   }
 
-  #projects div.desktop-visible:not([class^="des"]) {
+  #projects div.desktop-visible:not([class*="design"]) {
     grid-area: title;
     background: url('../img/backgrounds/dots.png') no-repeat right top;
   }
@@ -468,19 +464,29 @@ footer ul li a:hover object {
   }
 
   #projects .grid-container {
-    margin-top: 0;
+    margin: 0;
+    padding: 0;
     grid-template-rows: 55.8rem 35.042rem 46.5rem 27rem;
     grid-template-columns: 32.284% 23.258% 12.174% 32.284%;
     grid-template-areas: 'title art1 art1 art1'
                          'art2  des1 des2 des2'
                          'art3  art3 des2 des2'
                          'des3  des3 art4 art4';
-    width: 100vw;
+    width: 99.24vw;
   }
 
   #projects .grid-container > * {
     width: 100%;
     height: 100%;
+  }
+
+  #projects article {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
   }
 
   article.art1 {
@@ -499,17 +505,198 @@ footer ul li a:hover object {
     grid-area: art4;
   }
 
+  #projects .grid-container article.art4 img {
+    width: 80%;
+  }
+
+  #projects .grid-container article.art5 {
+    grid-area: des2;
+    height: 48.8rem;
+    width: 72.656%;
+    margin-top: 5.2rem;
+    margin-left: 17.5rem;
+  }
+
+  #projects .grid-container article.art5 .info {
+    bottom: unset;
+    top: 0;
+  }
+
   .design1 {
     grid-area: des1;
+    background: url('../img/backgrounds/dots.png') no-repeat left top,
+                url('../img/backgrounds/red_circle_half_left.png') no-repeat right top,
+                url('../img/backgrounds/teardrop.png') no-repeat right bottom;
   }
 
   .design2 {
     grid-area: des2;
-    background-color: blue;
+    background: url('../img/backgrounds/red_circle_half_right.png') no-repeat left top,
+                url('../img/backgrounds/square_romb_yellow.png') no-repeat left 17.5rem,
+                url('../img/projects/project6.png') no-repeat right top,
+                url('../img/backgrounds/colored_diamonds.png') no-repeat 100% 84.46%,
+                url('../img/backgrounds/red_diamond.png') no-repeat left bottom;
   }
 
   .design3 {
     grid-area: des3;
+    background: url('../img/backgrounds/blue_square_red_tear.png') no-repeat left top,
+                url('../img/backgrounds/yellow_tear.png') no-repeat right top;
+  }
+
+  #projects .grid-container article img {
+    width: 100%;
+    height: 102%;
+    margin-top: -0.35rem;
+  }
+
+  #projects .grid-container article .info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    padding-left: 6.25%;
+    padding-bottom: 0;
+    transition: height 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  #projects .grid-container article:hover .info {
+    height: 63.26%;
+  }
+
+  #projects .grid-container article.art2:hover .info,
+  #projects .grid-container article.art4:hover .info {
+    height: 86%;
+  }
+
+  #projects .grid-container article .info h2 {
+    font: 700 6rem/4.8rem var(--font-family2);
+  }
+
+  #projects .grid-container article .info ul li {
+    padding: 2rem 1.2rem 1.8rem;
+  }
+
+  #projects .grid-container article .info a.tag {
+    font: 300 2rem/1.6rem var(--font-family2);
+  }
+
+  #projects .grid-container article .info a.secondary-dark {
+    padding: 2rem 1.2rem 5.3rem;
+    font: 500 1.8rem/2.7rem var(--font-family2);
+    width: 21.2rem;
+    height: 5.1rem;
+  }
+
+  #about {
+    padding: 0 var(--desktop-padding-left-right);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'g r';
+    column-gap: 9.6rem;
+  }
+
+  #about-info {
+    grid-area: r;
+    margin-top: 3rem;
+  }
+
+  #about h1 {
+    font: 400 11rem/11rem var(--font-family1);
+  }
+
+  #about .grid-container {
+    grid-area: g;
+    display: grid;
+    grid-template-areas: 'bb rb'
+                         'yb db';
+    gap: 0;
+  }
+
+  #about .grid-container article {
+    margin-bottom: 0;
+  }
+
+  #db {
+    background: url('../img/backgrounds/dots.png') no-repeat center bottom,
+                url('../img/backgrounds/blue_square.png') no-repeat right 22%;
+  }
+
+  #contact-header,
+  #contact {
+    background-color: #F9F9FA;
+  }
+
+  #contact {
+    background: url('../img/backgrounds/blue_and_light_tear.png') no-repeat left top,
+                url('../img/backgrounds/bottom_most.png') no-repeat right bottom;
+    padding: 0 44.8rem;
+    padding-bottom: 13.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+  }
+
+  #contact h1 {
+    font: normal 11rem/11rem var(--font-family1);
+  }
+
+  #contact p {
+    width: 54.8rem;
+  }
+
+  #contact ul {
+    display: grid;
+    grid-template-areas: 'fu fe' 'ft ft' 'fb fb';
+    column-gap: 3.5rem;
+    row-gap: 4.2rem;
+    width: 54.8rem;
+  }
+
+  #contact ul li span {
+    all: unset;
+    font: 400 1rem/1.5rem var(--font-family2);
+    color: #7d7c84;
+  }
+
+  #input-username {
+    grid-area: fu;
+  }
+
+  #input-useremail {
+    grid-area: fe;
+  }
+
+  #input-message {
+    grid-area: ft;
+  }
+
+  #input-submit {
+    grid-area: fb;
+    width: 25.4rem;
+    margin: 0 auto;
+  }
+
+  #contact-header {
+    margin-top: 15.8rem;
+  }
+
+  footer {
+    margin-top: 0;
+    padding: 0 16rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer ul {
+    width: 26.2rem;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
