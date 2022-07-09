@@ -184,6 +184,12 @@ secondary type of button, so I implemented it */
   padding: 2rem 3.6rem var(--mobile-padding-left-right) 2rem;
 }
 
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
 #projects .grid-container article ul {
   margin-left: 2rem;
   display: flex;
@@ -191,12 +197,6 @@ secondary type of button, so I implemented it */
 
 #contact ul li {
   position: relative;
-}
-
-footer ul {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
 }
 
 #projects .grid-container article ul li {
@@ -249,6 +249,14 @@ footer ul {
   }
 }
 
+footer a object {
+  cursor: pointer;
+}
+
+footer > a object {
+  margin-left: 1.5rem;
+}
+
 footer ul li a:hover object {
   filter: brightness(0) saturate(100%) invert(97%) sepia(47%) saturate(1254%) hue-rotate(153deg) brightness(95%) contrast(80%);
 }
@@ -256,14 +264,6 @@ footer ul li a:hover object {
 #about .button object {
   margin-left: 1.2rem;
   vertical-align: middle;
-}
-
-footer a object {
-  cursor: pointer;
-}
-
-footer > a object {
-  margin-left: 1.5rem;
 }
 
 #projects a.button.secondary-dark object {
@@ -633,7 +633,8 @@ footer > a {
   #about .grid-container {
     grid-area: g;
     display: grid;
-    grid-template-areas: 'bb rb'
+    grid-template-areas:
+      'bb rb'
       'yb db';
     gap: 0;
   }
@@ -661,7 +662,7 @@ footer > a {
     padding-bottom: 13.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
   }
 
   #contact p {
