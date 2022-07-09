@@ -1,217 +1,729 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Eva-Lavinia's Portofolio</title>
-	<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-	
-	<header id="main-header">
-		<a id="logo" href="#" class="mobile-visible"></a>
-		<nav>
-			<ul>
-				<li class="mobile-visible"><img src="img/svgs/menuburger.svg" alt="Menu"></li>
-				<li class="desktop-visible"><a href="#main-header">Hello</a></li>
-				<li class="desktop-visible"><a href="#projects">Portfolio</a></li>
-				<li class="desktop-visible"><a href="#about">About</a></li>
-				<li class="desktop-visible"><a href="#contact">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+/* Import statements */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;500;600;800&display=swap');
 
-	<section id="hero">
-		<h1>Bucur Eva-Lavinia</h1>
-		<p>Nice meeting you! My name is Eva and I work in software development. I take great pleasure in creating websites and custom features for them. Below I've listed some of my works and projects, so you can browse through them and find out if my style suits your needs. Please contact me, if you'd like to collaborate for one of your projects!</p>
-		<a class="button primary-dark">Start collaborating</a>
-	</section>
+/* Variables */
+:root {
+  --primary-color: #1a2236;
+  --secondary-color: #fff;
+  --font-family1: 'Playfair Display', serif;
+  --font-family2: 'Poppins', sans-serif;
+  --mobile-padding-left-right: 1.6rem;
+  --tags-color: #98dede;
+}
 
-	<div id="geometry" class="mobile-visible"></div>
+/* Universal rules */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-	<section id="projects">
-		<h1 class="mobile-visible">Projects</h1>
-		<div class="grid-container">
-			<div class="desktop-visible">
-				<h1>Projects</h1>
-			</div>
-			<article class="art1">
-				<img src="img/projects/project1.png" alt="project image">
-				<div class="info">
-					<h2>Dummy project name 1</h2>
-					<ul>
-						<li><a href="#" class="tag">HTML/CSS</a></li>
-						<li><a href="#" class="tag">Ruby on Rails</a></li>
-						<li><a href="#" class="tag">JavaScript</a></li>
-					</ul>
-					<a href="#" class="button secondary-dark">
-						See this project  <object data="img/svgs/arrow.svg" width="10" height="10"></object>
-					</a>
-				</div>
-			</article>
-			<article class="art2">
-				<img src="img/projects/project2.png" alt="project image">
-				<div class="info">
-					<h2>Dummy project name 2</h2>
-					<ul>
-						<li><a href="#" class="tag">HTML/CSS</a></li>
-						<li><a href="#" class="tag">Ruby on Rails</a></li>
-						<li><a href="#" class="tag">JavaScript</a></li>
-					</ul>
-					<a href="#" class="button secondary-dark">
-						See this project  <object data="img/svgs/arrow.svg" width="10" height="10"></object>
-					</a>
-				</div>
-			</article>
-			<div class="desktop-visible design1">
-				<article>
-					<h2>Another thing</h2>
-				</article>
-			</div>
-			<div class="desktop-visible design2">
-				<article>
-					<h2>Something</h2>
-				</article>
-			</div>
-			<article class="art3">
-				<img src="img/projects/project3.png" alt="project image">
-				<div class="info">
-					<h2>Dummy project name 3</h2>
-					<ul>
-						<li><a href="#" class="tag">HTML/CSS</a></li>
-						<li><a href="#" class="tag">Ruby on Rails</a></li>
-						<li><a href="#" class="tag">JavaScript</a></li>
-					</ul>
-					<a href="#" class="button secondary-dark">
-						See this project  <object data="img/svgs/arrow.svg" width="10" height="10"></object>
-					</a>
-				</div>
-			</article>
-			<div class="desktop-visible design3">
-				<article>
-					<h2>Yet another thing</h2>
-				</article>
-			</div>
-			<article class="art4">
-				<img src="img/projects/project4.png" alt="project image">
-				<div class="info">
-					<h2>Dummy project name 4</h2>
-					<ul>
-						<li><a href="#" class="tag">HTML/CSS</a></li>
-						<li><a href="#" class="tag">Ruby on Rails</a></li>
-						<li><a href="#" class="tag">JavaScript</a></li>
-					</ul>
-					<a href="#" class="button secondary-dark">
-						See this project  <object data="img/svgs/arrow.svg" width="10" height="10"></object>
-					</a>
-				</div>
-			</article>
-			<article class="art5">
-				<img src="img/projects/project5.png" alt="project image">
-				<div class="info">
-					<h2>Dummy project name 5</h2>
-					<ul>
-						<li><a href="#" class="tag">HTML/CSS</a></li>
-						<li><a href="#" class="tag">Ruby on Rails</a></li>
-						<li><a href="#" class="tag">JavaScript</a></li>
-					</ul>
-					<a href="#" class="button secondary-dark">
-						See this project  <object data="img/svgs/arrow.svg" width="10" height="10"></object>
-					</a>
-				</div>
-			</article>
-			<article class="mobile-visible">
-				<img src="img/projects/project6.png" alt="project image">
-				<div class="info">
-					<h2>Dummy project name 6</h2>
-					<ul>
-						<li><a href="#" class="tag">HTML/CSS</a></li>
-						<li><a href="#" class="tag">Ruby on Rails</a></li>
-						<li><a href="#" class="tag">JavaScript</a></li>
-					</ul>
-					<a href="#" class="button secondary-dark">
-						See this project <object data="img/svgs/arrow.svg" width="10" height="10"></object>
-					</a>
-				</div>
-			</article>
-		</div>
-	</section>
+/* Visibility classes */
+.desktop-visible {
+  display: none;
+}
 
-	<section id="about">
-		<h1>About</h1>
-		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam laborum ducimus facilis dignissimos minima atque, et ullam aspernatur, ipsum, ab eum perferendis omnis minus? Rem repellat sit hic suscipit debitis!</p>
-		<a href="#" class="button primary-dark">
-			Get my CV <object data="img/svgs/download.svg"></object>
-		</a>
-		<div class="grid-container">
-			<article id="card-languages">
-				<h2>Languages</h2>
-				<ul>
-					<li>JavaScript (ES5/ES6)</li>
-					<li>Ruby</li>
-					<li>HTML</li>
-					<li>CSS</li>
-				</ul>
-			</article>
-			<article id="card-frameworks">
-				<h2>Frameworks</h2>
-				<ul>
-					<li>Bootstrap</li>
-					<li>Ruby on rails</li>
-					<li>RSpec</li>
-					<li>Capibara</li>
-					<li>Selenium</li>
-				</ul>
-			</article>
-			<article id="card-skills">
-				<h2>Skills</h2>
-				<ul>
-					<li>Codekit</li>
-					<li>Codepen</li>
-					<li>GitHub</li>
-					<li>GitLab</li>
-					<li>Terminal</li>
-				</ul>
-			</article>
-		</div>
-	</section>
+/* Elements */
+html {
+  font-size: 10px;
+}
 
-	<div id="contact-header"></div>
+body {
+  min-width: 32rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
 
-	<section id="contact">
-		<h1>Get started</h1>
-		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit quidem a velit in tempore repellendus maiores eligendi inventore corporis, laborum architecto amet tenetur beatae quos quia numquam porro, rerum commodi.</p>
-		<form action="https://formspree.io/f/xyyoqkay" method="POST">
-			<ul>
-				<li>
-					<span>Your name</span>
-					<input type="text" name="username" required maxlength="30" value="Anastasia" placeholder="Please provide your username">
-				</li>
-				<li>
-					<span>Your email</span>
-					<input type="email" name="user_email" required placeholder="Please provide your email address">
-				</li>
-				<li><textarea name="message" required maxlength="500" placeholder="Write your message here"></textarea></li>
-				<li><button type="submit" class="button primary-dark">Get in Touch</button></li>
-			</ul>
-		</form>
-	</section>
+ul {
+  list-style-type: none;
+}
 
-	<footer>
-		<a href="#">
-			<span>Get my Resume</span>
-			<object data="img/svgs/resume.svg"></object>
-		</a>
-		<ul>
-			<li><a href="#"><object data="img/socials/stackoverflow.svg" ></object></a></li>
-			<li><a href="#"><object data="img/socials/github.svg"></object></a></li>
-			<li><a href="#"><object data="img/socials/twitter.svg"></object></a></li>
-			<li><a href="#"><object data="img/socials/linkedin.svg"></object></a></li>
-			<li><a href="#"><object data="img/socials/medium.svg"></object></a></li>
-			<li><a href="#"><object data="img/socials/angellist.svg"></object></a></li>
-		</ul>
-	</footer>
+section {
+  margin-top: 3rem;
+  padding: 0 var(--mobile-padding-left-right) 2rem var(--mobile-padding-left-right);
+  color: var(--primary-color);
+}
 
-</body>
-</html>
+h1 {
+  padding-top: 1rem;
+  font: normal 5rem/100% var(--font-family1);
+}
+
+p {
+  font: normal 1.4rem/2.1rem var(--font-family2);
+}
+
+/* Main classes */
+.button {
+  height: 5rem;
+  font: normal var(--mobile-padding-left-right)/5rem var(--font-family2);
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Primary button (dark) */
+.button.primary-dark {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.button.primary-dark:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 0.1rem solid var(--primary-color);
+}
+
+.button.primary-dark:active {
+  border: 0.3rem solid var(--primary-color);
+  line-height: 4.4rem;
+}
+
+/* No such example is specified in the Figma buttons section,
+but clearly this is a button with black background and white
+text, and it should have been the dark version of the
+secondary type of button, so I implemented it */
+.button.secondary-dark {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 0.1rem solid var(--secondary-color);
+}
+
+.button.secondary-dark:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.button.secondary-dark:active {
+  border: 0.1rem solid var(--primary-color);
+  line-height: 4.6rem;
+}
+
+.grid-container {
+  margin-top: calc(var(--mobile-padding-left-right) * 2);
+  display: grid;
+}
+
+/* Sections and their components */
+#main-header {
+  height: 7.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#main-header nav {
+  margin-right: var(--mobile-padding-left-right);
+}
+
+#logo {
+  width: 11.1rem;
+  height: 100%;
+  background: var(--secondary-color) url("../img/backgrounds/logo.svg") no-repeat left top;
+}
+
+#hero {
+  height: 46rem; /* height needed for the flex container in order to use space-around */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 var(--mobile-padding-left-right) 2rem;
+}
+
+#hero h1 {
+  margin-left: 0;
+}
+
+#hero p {
+  letter-spacing: -0.01em;
+}
+
+#geometry {
+  width: 100%;
+  height: 24.23rem;
+  background: var(--secondary-color) url('../img/backgrounds/geometry.svg') no-repeat center;
+  background-size: 100% auto;
+}
+
+#projects {
+  padding: 0;
+}
+
+#projects h1 {
+  margin-left: var(--mobile-padding-left-right);
+}
+
+#projects .grid-container {
+  grid-template-columns: 6;
+}
+
+#projects .grid-container article {
+  display: flex;
+  flex-direction: column;
+}
+
+#projects .grid-container article .info {
+  padding-bottom: 2rem;
+  background-color: var(--primary-color);
+  margin: -0.2rem 0;
+}
+
+#projects .grid-container article img {
+  transition: transform 0.8s;
+}
+
+#projects .grid-container article img:hover {
+  transform: rotateY(45deg) rotateZ(30deg);
+}
+
+#projects .grid-container article h2 {
+  color: var(--secondary-color);
+  font: 300 2rem/var(--mobile-padding-left-right) var(--font-family2);
+  padding: 2rem 3.6rem var(--mobile-padding-left-right) 2rem;
+}
+
+#projects .grid-container article ul {
+  margin-left: 2rem;
+  display: flex;
+}
+
+#projects .grid-container article ul li {
+  margin-right: 2rem;
+  padding: 0.6rem 1rem;
+  background-color: var(--tags-color);
+  transition-property: transform, background-color, color;
+  transition-duration: 1s;
+}
+
+#projects .grid-container article ul li:hover {
+  transform: rotate(5deg) scale(1.4);
+  background-color: orangered;
+  color: black;
+}
+
+#projects .grid-container a.tag {
+  font: 300 1.033rem/0.827rem var(--font-family2);
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+#projects a.button {
+  width: 17.8rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  display: inline-block;
+}
+
+#projects a.button:hover {
+  animation: shake infinite 1s ease-in-out;
+}
+
+@keyframes shake {
+  from {
+    transform: translateX(-1rem);
+  }
+
+  50% {
+    transform: translateX(1rem);
+  }
+
+  to {
+    transform: translateX(-1rem);
+  }
+}
+
+#projects a.button.secondary-dark object {
+  margin-left: 1.2rem;
+  width: 2.057rem;
+  height: 1.535rem;
+  vertical-align: middle;
+}
+
+#about h1,
+#contact h1 {
+  padding-bottom: 2rem;
+}
+
+#about .button,
+#contact .button {
+  display: block;
+  width: 100%;
+}
+
+#about .button {
+  margin-top: 3.2rem;
+  margin-bottom: 4rem;
+}
+
+#about .button object {
+  margin-left: 1.2rem;
+  vertical-align: middle;
+}
+
+#projects .button.secondary-dark:hover object,
+#about .button.primary-dark:hover object {
+  filter: brightness(0) saturate(100%) invert(9%) sepia(8%) saturate(4066%) hue-rotate(185deg) brightness(96%) contrast(90%);
+}
+
+#about .grid-container {
+  grid-template-columns: 3;
+  justify-content: center;
+}
+
+#about .grid-container article {
+  width: 28.9rem;
+  height: 28.9rem;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  margin-bottom: var(--mobile-padding-left-right);
+  padding-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--secondary-color);
+  font-family: var(--font-family2);
+}
+
+#card-languages {
+  background: #1c52ba url('../img/backgrounds/hash.svg');
+}
+
+#card-frameworks {
+  background: #e2505c url('../img/backgrounds/framework.svg');
+}
+
+#card-skills {
+  background: #febf52 url('../img/backgrounds/skills.svg');
+}
+
+#about .grid-container article h2 {
+  margin-top: 5rem;
+  font: 800 2rem/3rem var(--font-family2);
+}
+
+#about .grid-container article ul {
+  margin-top: 2.1rem;
+  list-style-type: disc;
+}
+
+#about .grid-container article ul li {
+  font: 600 1.8rem/2.7rem var(--font-family2);
+  letter-spacing: -5.25%;
+}
+
+#contact-header {
+  height: 7.4rem;
+  background: var(--secondary-color) url("../img/backgrounds/logo.svg") no-repeat left top;
+}
+
+#contact p {
+  font: 400 1.4rem/2.1rem var(--font-family2);
+  margin-bottom: 3.2rem;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 0.4rem;
+  font: 400 1.4rem/2.1rem var(--font-family2);
+  color: var(--primary-color);
+  padding: var(--mobile-padding-left-right) var(--mobile-padding-left-right) 0.8rem;
+  margin-bottom: 2rem;
+}
+
+#contact form input {
+  line-height: 2.4rem;
+  margin-bottom: 0.8rem;
+}
+
+#contact ul li {
+  position: relative;
+}
+
+#contact ul li span {
+  position: absolute;
+  left: 1.6rem;
+  top: 0.4rem;
+  font: 400 1rem/1.5rem var(--font-family2);
+  color: #7d7c84;
+}
+
+footer {
+  background: var(--primary-color);
+  padding: 0 var(--mobile-padding-left-right);
+  margin-top: 6.4rem;
+}
+
+footer a {
+  display: block;
+  font: 500 var(--mobile-padding-left-right)/2.4rem var(--font-family2);
+  color: #92dcdc;
+  padding-top: 3.2rem;
+  padding-bottom: 3.05rem;
+  text-decoration: none;
+}
+
+footer > a {
+  display: flex;
+  align-items: center;
+}
+
+footer a object {
+  cursor: pointer;
+}
+
+footer > a object {
+  margin-left: 1.5rem;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+footer ul li a:hover object {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(47%) saturate(1254%) hue-rotate(153deg) brightness(95%) contrast(80%);
+}
+
+@media only screen and (min-width: 768px) {
+  :root {
+    --desktop-padding-left-right: 16rem;
+  }
+
+  .desktop-visible {
+    display: unset;
+  }
+
+  .mobile-visible {
+    display: none !important;
+  }
+
+  body {
+    max-width: max-content;
+  }
+
+  a.button.primary-dark {
+    width: 25.4rem !important;
+  }
+
+  #main-header {
+    display: block;
+  }
+
+  #main-header nav ul {
+    height: 7.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #main-header nav ul li {
+    margin-left: 5rem;
+  }
+
+  #main-header nav ul li a {
+    font: normal 1.6rem/2.4rem var(--font-family2);
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+
+  #hero {
+    padding: 0 var(--desktop-padding-left-right);
+  }
+
+  #hero > * {
+    max-width: 48.4rem;
+  }
+
+  /* Remove transitions of images in articles */
+  #projects .grid-container article img {
+    transition: none;
+  }
+
+  #projects .grid-container article img:hover {
+    transform: none;
+  }
+  /* End of Remove transitions of images in articles */
+
+  #projects {
+    margin-top: 20.991rem;
+  }
+
+  #projects div.desktop-visible:not([class*="design"]) {
+    grid-area: title;
+    background: url('../img/backgrounds/dots.png') no-repeat right top;
+  }
+
+  #projects div.desktop-visible h1 {
+    display: inline-block;
+    font: normal 11rem/11rem var(--font-family1);
+    transform: rotate(-90deg) translate(calc(-39.8rem + 65%), -50%);
+  }
+
+  #projects .grid-container {
+    margin: 0;
+    padding: 0;
+    grid-template-rows: 55.8rem 35.042rem 46.5rem 27rem;
+    grid-template-columns: 32.284% 23.258% 12.174% 32.284%;
+    grid-template-areas: 'title art1 art1 art1'
+                         'art2  des1 des2 des2'
+                         'art3  art3 des2 des2'
+                         'des3  des3 art4 art4';
+    width: 99.24vw;
+  }
+
+  #projects .grid-container > * {
+    width: 100%;
+    height: 100%;
+  }
+
+  #projects article {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  article.art1 {
+    grid-area: art1;
+  }
+
+  article.art2 {
+    grid-area: art2;
+  }
+
+  article.art3 {
+    grid-area: art3;
+  }
+
+  article.art4 {
+    grid-area: art4;
+  }
+
+  #projects .grid-container article.art4 img {
+    width: 80%;
+  }
+
+  #projects .grid-container article.art5 {
+    grid-area: des2;
+    height: 48.8rem;
+    width: 72.656%;
+    margin-top: 5.2rem;
+    margin-left: 17.5rem;
+  }
+
+  #projects .grid-container article.art5 .info {
+    bottom: unset;
+    top: 0;
+  }
+
+  .design1 {
+    grid-area: des1;
+    background: url('../img/backgrounds/dots.png') no-repeat left top,
+                url('../img/backgrounds/red_circle_half_left.png') no-repeat right top,
+                url('../img/backgrounds/teardrop.png') no-repeat right bottom;
+  }
+
+  .design2 {
+    grid-area: des2;
+    background: url('../img/backgrounds/red_circle_half_right.png') no-repeat left top,
+                url('../img/backgrounds/square_romb_yellow.png') no-repeat left 17.5rem,
+                url('../img/projects/project6.png') no-repeat right top,
+                url('../img/backgrounds/colored_diamonds.png') no-repeat 100% 84.46%,
+                url('../img/backgrounds/red_diamond.png') no-repeat left bottom;
+  }
+
+  .design3 {
+    grid-area: des3;
+    background: url('../img/backgrounds/blue_square_red_tear.png') no-repeat left top,
+                url('../img/backgrounds/yellow_tear.png') no-repeat right top;
+  }
+
+  #projects .grid-container article img {
+    width: 100%;
+    height: 102%;
+    margin-top: -0.35rem;
+  }
+
+  #projects .grid-container article .info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    padding-left: 6.25%;
+    padding-bottom: 0;
+    transition: height 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  #projects .grid-container article:hover .info {
+    height: 63.26%;
+  }
+
+  #projects .grid-container article.art2:hover .info,
+  #projects .grid-container article.art4:hover .info {
+    height: 86%;
+  }
+
+  #projects .grid-container article .info h2 {
+    font: 700 6rem/4.8rem var(--font-family2);
+  }
+
+  #projects .grid-container article .info ul li {
+    padding: 2rem 1.2rem 1.8rem;
+  }
+
+  #projects .grid-container article .info a.tag {
+    font: 300 2rem/1.6rem var(--font-family2);
+  }
+
+  #projects .grid-container article .info a.secondary-dark {
+    padding: 2rem 1.2rem 5.3rem;
+    font: 500 1.8rem/2.7rem var(--font-family2);
+    width: 21.2rem;
+    height: 5.1rem;
+  }
+
+  #about {
+    padding: 0 var(--desktop-padding-left-right);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'g r';
+    column-gap: 9.6rem;
+  }
+
+  #about-info {
+    grid-area: r;
+    margin-top: 3rem;
+  }
+
+  #about h1 {
+    font: 400 11rem/11rem var(--font-family1);
+  }
+
+  #about .grid-container {
+    grid-area: g;
+    display: grid;
+    grid-template-areas: 'bb rb'
+                         'yb db';
+    gap: 0;
+  }
+
+  #about .grid-container article {
+    margin-bottom: 0;
+  }
+
+  #db {
+    background: url('../img/backgrounds/dots.png') no-repeat center bottom,
+                url('../img/backgrounds/blue_square.png') no-repeat right 22%;
+  }
+
+  #contact-header,
+  #contact {
+    background-color: #F9F9FA;
+  }
+
+  #contact {
+    background: url('../img/backgrounds/blue_and_light_tear.png') no-repeat left top,
+                url('../img/backgrounds/bottom_most.png') no-repeat right bottom;
+    padding: 0 44.8rem;
+    padding-bottom: 13.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+  }
+
+  #contact h1 {
+    font: normal 11rem/11rem var(--font-family1);
+  }
+
+  #contact p {
+    width: 54.8rem;
+  }
+
+  #contact ul {
+    display: grid;
+    grid-template-areas: 'fu fe' 'ft ft' 'fb fb';
+    column-gap: 3.5rem;
+    row-gap: 4.2rem;
+    width: 54.8rem;
+  }
+
+  #contact ul li span {
+    all: unset;
+    font: 400 1rem/1.5rem var(--font-family2);
+    color: #7d7c84;
+  }
+
+  #input-username {
+    grid-area: fu;
+  }
+
+  #input-useremail {
+    grid-area: fe;
+  }
+
+  #input-message {
+    grid-area: ft;
+  }
+
+  #input-submit {
+    grid-area: fb;
+    width: 25.4rem;
+    margin: 0 auto;
+  }
+
+  #contact-header {
+    margin-top: 15.8rem;
+  }
+
+  footer {
+    margin-top: 0;
+    padding: 0 16rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer ul {
+    width: 26.2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 1038px) {
+  #hero {
+    position: relative;
+  }
+
+  #hero::after {
+    content: "";
+    background: url('../img/backgrounds/lateral-geometry-desktop.png') no-repeat right top;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: fadeIn 1s;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
