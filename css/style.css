@@ -189,16 +189,22 @@ secondary type of button, so I implemented it */
   display: flex;
 }
 
+#contact ul li {
+  position: relative;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
 #projects .grid-container article ul li {
   margin-right: 2rem;
   padding: 0.6rem 1rem;
   background-color: var(--tags-color);
   transition-property: transform, background-color, color;
   transition-duration: 1s;
-}
-
-#contact ul li {
-  position: relative;
 }
 
 #about .grid-container article ul li {
@@ -243,19 +249,21 @@ secondary type of button, so I implemented it */
   }
 }
 
+footer ul li a:hover object {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(47%) saturate(1254%) hue-rotate(153deg) brightness(95%) contrast(80%);
+}
+
 #about .button object {
   margin-left: 1.2rem;
   vertical-align: middle;
 }
 
-footer ul {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
+footer a object {
+  cursor: pointer;
 }
 
-footer ul li a:hover object {
-  filter: brightness(0) saturate(100%) invert(97%) sepia(47%) saturate(1254%) hue-rotate(153deg) brightness(95%) contrast(80%);
+footer > a object {
+  margin-left: 1.5rem;
 }
 
 #projects a.button.secondary-dark object {
@@ -279,14 +287,6 @@ footer ul li a:hover object {
 #about .button {
   margin-top: 3.2rem;
   margin-bottom: 4rem;
-}
-
-footer a object {
-  cursor: pointer;
-}
-
-footer > a object {
-  margin-left: 1.5rem;
 }
 
 #projects .button.secondary-dark:hover object,
@@ -455,9 +455,6 @@ footer > a {
   /* Remove transitions of images in articles */
   #projects .grid-container article img {
     transition: none;
-  }
-
-  #projects .grid-container article img {
     width: 100%;
     height: 102%;
     margin-top: -0.35rem;
@@ -497,7 +494,8 @@ footer > a {
     padding: 0;
     grid-template-rows: 55.8rem 35.042rem 46.5rem 27rem;
     grid-template-columns: 32.284% 23.258% 12.174% 32.284%;
-    grid-template-areas: 'title art1 art1 art1'
+    grid-template-areas:
+      'title art1 art1 art1'
       'art2  des1 des2 des2'
       'art3  art3 des2 des2'
       'des3  des3 art4 art4';
@@ -568,14 +566,16 @@ footer > a {
 
   .design1 {
     grid-area: des1;
-    background: url('../img/backgrounds/dots.png') no-repeat left top,
+    background:
+      url('../img/backgrounds/dots.png') no-repeat left top,
       url('../img/backgrounds/red_circle_half_left.png') no-repeat right top,
       url('../img/backgrounds/teardrop.png') no-repeat right bottom;
   }
 
   .design2 {
     grid-area: des2;
-    background: url('../img/backgrounds/red_circle_half_right.png') no-repeat left top,
+    background:
+      url('../img/backgrounds/red_circle_half_right.png') no-repeat left top,
       url('../img/backgrounds/square_romb_yellow.png') no-repeat left 17.5rem,
       url('../img/projects/project6.png') no-repeat right top,
       url('../img/backgrounds/colored_diamonds.png') no-repeat 100% 84.46%,
@@ -584,7 +584,8 @@ footer > a {
 
   .design3 {
     grid-area: des3;
-    background: url('../img/backgrounds/blue_square_red_tear.png') no-repeat left top,
+    background:
+      url('../img/backgrounds/blue_square_red_tear.png') no-repeat left top,
       url('../img/backgrounds/yellow_tear.png') no-repeat right top;
   }
 
@@ -642,7 +643,8 @@ footer > a {
   }
 
   #db {
-    background: url('../img/backgrounds/dots.png') no-repeat center bottom,
+    background:
+      url('../img/backgrounds/dots.png') no-repeat center bottom,
       url('../img/backgrounds/blue_square.png') no-repeat right 22%;
   }
 
@@ -652,7 +654,8 @@ footer > a {
   }
 
   #contact {
-    background: url('../img/backgrounds/blue_and_light_tear.png') no-repeat left top,
+    background:
+      url('../img/backgrounds/blue_and_light_tear.png') no-repeat left top,
       url('../img/backgrounds/bottom_most.png') no-repeat right bottom;
     padding: 0 44.8rem;
     padding-bottom: 13.5rem;
