@@ -19,7 +19,7 @@ Using Template 5 from Figma.
 
 ## Live Preview
 
-[Live Preview](https://i.postimg.cc/BZMH9npd/preview.png)
+![Live Preview](https://i.postimg.cc/BZMH9npd/preview.png)
 ## Author
 
 👤 **Bucur Liviu-Emanuel (Eva)**
