@@ -559,6 +559,15 @@ footer > a {
     margin-left: 17.5rem;
   }
 
+  #projects .grid-container article:hover .info {
+    height: 63.26%;
+  }
+
+  #projects .grid-container article.art2:hover .info,
+  #projects .grid-container article.art4:hover .info {
+    height: 86%;
+  }
+
   #projects .grid-container article#art5 .info {
     bottom: unset;
     top: 0;
@@ -587,15 +596,6 @@ footer > a {
     background:
       url('../img/backgrounds/blue_square_red_tear.png') no-repeat left top,
       url('../img/backgrounds/yellow_tear.png') no-repeat right top;
-  }
-
-  #projects .grid-container article:hover .info {
-    height: 63.26%;
-  }
-
-  #projects .grid-container article.art2:hover .info,
-  #projects .grid-container article.art4:hover .info {
-    height: 86%;
   }
 
   #projects .grid-container article .info h2 {
