@@ -176,16 +176,16 @@
 		<form action="https://formspree.io/f/xyyoqkay" method="POST">
 			<ul>
 				<li id="input-username">
-					<span>Your name</span>
-					<input type="text" name="username" required maxlength="30" value="Anastasia" placeholder="Please provide your username">
+					<label for="username">Your name</label>
+					<input id="username" type="text" name="username" required maxlength="30" value="Anastasia" placeholder="Please provide your username">
 				</li>
 				<li id="input-useremail">
-					<span>Your email</span>
-					<input type="email" name="user_email" required placeholder="Please provide your email address">
+					<label for="user_email">Your email</label>
+					<input id="user_email" type="email" name="user_email" required placeholder="Please provide your email address">
 				</li>
 				<li id="input-message">
-					<span>Message</span>
-					<textarea name="message" required maxlength="500" placeholder="Write your message here"></textarea>
+					<label for="message">Message</label>
+					<textarea id="message" name="message" required maxlength="500" placeholder="Write your message here"></textarea>
 				</li>
 				<li id="input-submit"><button type="submit" class="button primary-dark">Get in Touch</button></li>
 			</ul>
