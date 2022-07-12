@@ -34,9 +34,17 @@ Using Template 5 from Figma.
 - Twitter: [@meet__ed](https://twitter.com/meed__ed)
 - LinkedIn [Edmund Yaw Debrah](https://www.linkedin.com/in/edmund-yaw-debrah-054461235)
 
+👤 **Aamir Khan**
+
+- GitHub: [@aamirkhan2478](https://github.com/aamirkhan2478)
+- Twitter: [@SmartKhan2478](https://twitter.com/SmartKhan2478)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/aamir-khan-302a44237/)
+
 ## Contributions
 
 In the Peer Programming section of week 2, day 4 I contributed to [Edmund Yaw Debrah's project portfolio-website](https://github.com/codewithed/portfolio-website).
+
+In the Peer Programming section of week 3, day 2 [Aamir Khan](https://github.com/aamirkhan2478) contributed to this repo.
 
 ## 🤝 Contributing
 
