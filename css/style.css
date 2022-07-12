@@ -27,7 +27,7 @@
 
 /* Elements */
 html {
-  font-size: 10px;
+  font-size: clamp(10px, 10px, 10px);
 }
 
 body {
