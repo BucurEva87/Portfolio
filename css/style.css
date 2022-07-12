@@ -470,7 +470,7 @@ footer > a {
     margin-top: 20.991rem;
   }
 
-  #projects div.desktop-visible:not([class*="design"]) {
+  #projects div.desktop-visible:not([id*="design"]) {
     grid-area: title;
     background: url('../img/backgrounds/dots.png') no-repeat right top;
   }
@@ -516,23 +516,23 @@ footer > a {
     overflow: hidden;
   }
 
-  article.art1 {
+  article#art1 {
     grid-area: art1;
   }
 
-  article.art2 {
+  article#art2 {
     grid-area: art2;
   }
 
-  article.art3 {
+  article#art3 {
     grid-area: art3;
   }
 
-  article.art4 {
+  article#art4 {
     grid-area: art4;
   }
 
-  #projects .grid-container article.art4 img {
+  #projects .grid-container article#art4 img {
     width: 80%;
   }
 
@@ -551,42 +551,12 @@ footer > a {
     cursor: pointer;
   }
 
-  #projects .grid-container article.art5 {
+  #projects .grid-container article#art5 {
     grid-area: des2;
     height: 48.8rem;
     width: 72.656%;
     margin-top: 5.2rem;
     margin-left: 17.5rem;
-  }
-
-  #projects .grid-container article.art5 .info {
-    bottom: unset;
-    top: 0;
-  }
-
-  .design1 {
-    grid-area: des1;
-    background:
-      url('../img/backgrounds/dots.png') no-repeat left top,
-      url('../img/backgrounds/red_circle_half_left.png') no-repeat right top,
-      url('../img/backgrounds/teardrop.png') no-repeat right bottom;
-  }
-
-  .design2 {
-    grid-area: des2;
-    background:
-      url('../img/backgrounds/red_circle_half_right.png') no-repeat left top,
-      url('../img/backgrounds/square_romb_yellow.png') no-repeat left 17.5rem,
-      url('../img/projects/project6.png') no-repeat right top,
-      url('../img/backgrounds/colored_diamonds.png') no-repeat 100% 84.46%,
-      url('../img/backgrounds/red_diamond.png') no-repeat left bottom;
-  }
-
-  .design3 {
-    grid-area: des3;
-    background:
-      url('../img/backgrounds/blue_square_red_tear.png') no-repeat left top,
-      url('../img/backgrounds/yellow_tear.png') no-repeat right top;
   }
 
   #projects .grid-container article:hover .info {
@@ -596,6 +566,36 @@ footer > a {
   #projects .grid-container article.art2:hover .info,
   #projects .grid-container article.art4:hover .info {
     height: 86%;
+  }
+
+  #projects .grid-container article#art5 .info {
+    bottom: unset;
+    top: 0;
+  }
+
+  #design1 {
+    grid-area: des1;
+    background:
+      url('../img/backgrounds/dots.png') no-repeat left top,
+      url('../img/backgrounds/red_circle_half_left.png') no-repeat right top,
+      url('../img/backgrounds/teardrop.png') no-repeat right bottom;
+  }
+
+  #design2 {
+    grid-area: des2;
+    background:
+      url('../img/backgrounds/red_circle_half_right.png') no-repeat left top,
+      url('../img/backgrounds/square_romb_yellow.png') no-repeat left 17.5rem,
+      url('../img/projects/project6.png') no-repeat right top,
+      url('../img/backgrounds/colored_diamonds.png') no-repeat 100% 84.46%,
+      url('../img/backgrounds/red_diamond.png') no-repeat left bottom;
+  }
+
+  #design3 {
+    grid-area: des3;
+    background:
+      url('../img/backgrounds/blue_square_red_tear.png') no-repeat left top,
+      url('../img/backgrounds/yellow_tear.png') no-repeat right top;
   }
 
   #projects .grid-container article .info h2 {
