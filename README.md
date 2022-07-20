@@ -3,9 +3,8 @@
 # Portofolio
 
 > Week 2, day 4 Microverse Portofolio project.
-First two sections of the mobile website plus the contact me and footer sections.
-Using Template 5 from Figma.
-
+> First two sections of the mobile website plus the contact me and footer sections.
+> Using Template 5 from Figma.
 
 ## Built With
 
@@ -20,6 +19,7 @@ Using Template 5 from Figma.
 ## Live Preview
 
 ![Live Preview](https://i.postimg.cc/BZMH9npd/preview.png)
+
 ## Author
 
 👤 **Bucur Liviu-Emanuel (Eva)**
@@ -31,7 +31,7 @@ Using Template 5 from Figma.
 👤 **Edmund Yaw Debrah**
 
 - GitHub: [@codewithed](https://github.com/codewithed)
-- Twitter: [@meet__ed](https://twitter.com/meed__ed)
+- Twitter: [@meet\_\_ed](https://twitter.com/meed__ed)
 - LinkedIn [Edmund Yaw Debrah](https://www.linkedin.com/in/edmund-yaw-debrah-054461235)
 
 👤 **Aamir Khan**
@@ -39,6 +39,12 @@ Using Template 5 from Figma.
 - GitHub: [@aamirkhan2478](https://github.com/aamirkhan2478)
 - Twitter: [@SmartKhan2478](https://twitter.com/SmartKhan2478)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/aamir-khan-302a44237/)
+
+👤 **Choice Osobor**
+
+- GitHub: [@githubhandle](https://github.com/techEmprez)
+- Twitter: [@twitterhandle](https://twitter.com/Suigeneriz_)
+- LinkedIn: [Choice Osobor](https://www.linkedin.com/in/choice-osobor/)
 
 ## Contributions
 
