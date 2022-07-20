@@ -11,8 +11,8 @@ function toggleBurgerMenu() {
   burgerIcon.classList.toggle('no-display');
   burgerCloseIcon.classList.toggle('no-display');
   container.classList.toggle('enlarged');
-  
-  for (let i = 0, l = links.length; i < l; i++) {
+
+  for (let i = 0, l = links.length; i < l; i += 1) {
     links[i].classList.toggle('desktop-visible');
   }
 }
