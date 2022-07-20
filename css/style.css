@@ -34,7 +34,6 @@ body {
   min-width: 32rem;
   max-width: 50rem;
   margin: 0 auto;
-  font-size: clamp(1em, 1em, 1em);
 }
 
 ul {
@@ -160,7 +159,7 @@ secondary type of button, so I implemented it */
 }
 
 #projects .grid-container {
-  grid-template-columns: 6;
+  grid-template-columns: repeat(6, 1fr);
 }
 
 #projects .grid-container article {
@@ -298,7 +297,7 @@ footer ul li a:hover object {
 }
 
 #about .grid-container {
-  grid-template-columns: 3;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
 }
 

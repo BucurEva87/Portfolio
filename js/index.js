@@ -1,10 +1,6 @@
-const qs = (selector = '*', element = document) => {
-  return element.querySelector(selector);
-}
+const qs = (selector = '*', element = document) => element.querySelector(selector);
 
-const qsa = (selector = '*', element = document) => {
-  return [...element.querySelectorAll(selector)];
-}
+const qsa = (selector = '*', element = document) => [...element.querySelectorAll(selector)];
 
 const burgerIcon = qs('#main-header li');
 const burgerCloseIcon = qsa('#main-header li')[1];
@@ -16,15 +12,15 @@ function toggleBurgerMenu() {
   burgerCloseIcon.classList.toggle('no-display');
   container.classList.toggle('enlarged');
   
-  for (const link of links) {
-    link.classList.toggle('desktop-visible');
+  for (let i = 0, l = links.length; i < l; i++) {
+    links[i].classList.toggle('desktop-visible');
   }
 }
 
 burgerIcon.addEventListener('click', () => toggleBurgerMenu());
 burgerCloseIcon.addEventListener('click', () => toggleBurgerMenu());
 
-container.addEventListener('click', e => {
+container.addEventListener('click', (e) => {
   const { target } = e;
 
   if (target.tagName.toLowerCase() !== 'a') return;
@@ -39,4 +35,4 @@ window.onresize = () => {
   if (window.innerWidth >= 768 && container.classList.contains('enlarged')) {
     toggleBurgerMenu();
   }
-}
+};
