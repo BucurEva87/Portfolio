@@ -123,3 +123,19 @@ utils.qs('#projects').addEventListener('click', (e) => {
 
   createModal(project);
 });
+
+// Check form for improper input (not lowercase)
+utils.qs('form').addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const { value } = utils.qs('#user_email');
+  const errorField = utils.qs('.emailError');
+
+  if (value !== value.toLowerCase()) {
+    errorField.textContent = 'Please type your email address in all lowercase.';
+    return;
+  }
+
+  errorField.textContent = '';
+  utils.qs('form').submit();
+});

@@ -431,6 +431,12 @@ footer > a {
   text-decoration: none;
 }
 
+.emailError {
+  color: var(--primary-color);
+  font: 400 1.8rem/2.7rem var(--font-family2);
+  font-weight: bold;
+}
+
 @media only screen and (min-width: 768px) {
   :root {
     --desktop-padding-left-right: 16rem;
