@@ -139,3 +139,40 @@ utils.qs('form').addEventListener('submit', (e) => {
   errorField.textContent = '';
   utils.qs('form').submit();
 });
+
+// Store input data inside an object that facilitates the communication
+// with the LocalStorage so that it can be retrieved for pre-filling
+// purposes
+const store = {
+  name: '',
+  email: '',
+  message: '',
+};
+
+// Some comment no one needs
+utils.qs('#username').addEventListener('input', (e) => {
+  store.name = e.target.value;
+});
+
+// Another comment no one needs
+utils.qs('#user_email').addEventListener('input', (e) => {
+  store.email = e.target.value;
+});
+
+// Let's hope Tracy will do fine. We'll see tomorrow morning ^_^
+utils.qs('#message').addEventListener('input', (e) => {
+  store.message = e.target.value;
+});
+
+qsa('#username, #user_email, #message').addEventListener('input', (e) => {
+  localStorage.setItem('data', JSON.stringify(store));
+});
+
+let data = localStorage.getItem('data');
+
+if (data) {
+  data = JSON.parse(data);
+  qs('#username').value = data.name;
+  qs('#user_email').value = data.email;
+  qs('#message').value = data.message;
+}
