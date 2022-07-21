@@ -121,7 +121,7 @@ html {
   .modalContainer {
     /* margin: 7rem; */
     padding: 0 6rem;
-    background-color: var(--secondary-color);;
+    background-color: var(--secondary-color);
   }
 
   .closeBtn {
@@ -174,7 +174,7 @@ html {
 
   .pagination a {
     font: 300 1.8rem/2.7rem var(--font-family2);
-    color: var(--primary-color);;
+    color: var(--primary-color);
   }
 
   .modal-arrow-left,
