@@ -161,7 +161,7 @@ utils.qs('#message').addEventListener('input', (e) => {
   store.message = e.target.value;
 });
 
-qsa('#username, #user_email, #message').addEventListener('input', (e) => {
+utils.qsa('#username, #user_email, #message').addEventListener('input', () => {
   localStorage.setItem('data', JSON.stringify(store));
 });
 
@@ -169,7 +169,7 @@ let data = localStorage.getItem('data');
 
 if (data) {
   data = JSON.parse(data);
-  qs('#username').value = data.name;
-  qs('#user_email').value = data.email;
-  qs('#message').value = data.message;
+  utils.qs('#username').value = data.name;
+  utils.qs('#user_email').value = data.email;
+  utils.qs('#message').value = data.message;
 }
