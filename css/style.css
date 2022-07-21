@@ -159,7 +159,7 @@ secondary type of button, so I implemented it */
 }
 
 #projects .grid-container {
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
 }
 
 #projects .grid-container article {
@@ -297,7 +297,7 @@ footer ul li a:hover object {
 }
 
 #about .grid-container {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   justify-content: center;
 }
 
@@ -421,6 +421,7 @@ footer > a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 
 .enlarged a {
@@ -428,6 +429,12 @@ footer > a {
   font: 400 1.6rem/4.8rem "Poppins", sans-serif;
   color: var(--primary-color);
   text-decoration: none;
+}
+
+.emailError {
+  color: var(--primary-color);
+  font: 400 1.8rem/2.7rem var(--font-family2);
+  font-weight: bold;
 }
 
 @media only screen and (min-width: 768px) {
