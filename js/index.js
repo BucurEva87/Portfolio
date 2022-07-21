@@ -1,11 +1,11 @@
-const qs = (selector = '*', element = document) => element.querySelector(selector);
+import utils from './utils.js';
+import projects from './projects.js';
+import createModal from './modal.js';
 
-const qsa = (selector = '*', element = document) => [...element.querySelectorAll(selector)];
-
-const burgerIcon = qs('#main-header li');
-const burgerCloseIcon = qsa('#main-header li')[1];
-const container = qs('#main-header ul');
-const links = qsa('li.desktop-visible', container);
+const burgerIcon = utils.qs('#main-header li');
+const burgerCloseIcon = utils.qsa('#main-header li')[1];
+const container = utils.qs('#main-header ul');
+const links = utils.qsa('li.desktop-visible', container);
 
 function toggleBurgerMenu() {
   burgerIcon.classList.toggle('no-display');
@@ -26,7 +26,7 @@ container.addEventListener('click', (e) => {
   if (target.tagName.toLowerCase() !== 'a') return;
 
   toggleBurgerMenu();
-  qs(target.getAttribute('href')).scrollIntoView();
+  utils.qs(target.getAttribute('href')).scrollIntoView();
 });
 
 // If the burger menu is opened and the screen is resized to desktop
@@ -37,137 +37,89 @@ window.onresize = () => {
   }
 };
 
-const projects = [
-  {
-    id: 1,
-    title: 'Project 1',
-    image: 'project1.png',
-    languages: ['HTML/CSS', 'Ruby on Rails', 'JavaScript']
-  },
-  {
-    id: 2,
-    title: 'Project 2',
-    image: 'project2.png',
-    languages: ['HTML/CSS', 'Ruby on Rails', 'JavaScript']
-  },
-  {
-    id: 3,
-    title: 'Project 3',
-    image: 'project3.png',
-    languages: ['HTML/CSS', 'Ruby on Rails', 'JavaScript']
-  },
-  {
-    id: 4,
-    title: 'Project 4',
-    image: 'project4.png',
-    languages: ['HTML/CSS', 'Ruby on Rails', 'JavaScript']
-  },
-  {
-    id: 5,
-    title: 'Project 5',
-    image: 'project5.png',
-    languages: ['HTML/CSS', 'Ruby on Rails', 'JavaScript']
-  },
-  {
-    id: 6,
-    title: 'Project 6',
-    image: 'project6.png',
-    languages: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'],
-    invisible: true
-  }
-];
-
-function createElement(obj) {
-  const element = document.createElement(obj.tagName);
-  delete obj.tagName;
-
-  // Itterate through each property of the obj and set it as a
-  // property of the element
-  for (let prop in obj) {
-    // Property is a class or a collection of classes
-    if (prop === 'class') {
-      // Collection (array)
-      if (typeof obj[prop] === 'object') {
-        element.classList.add(...obj[prop]);
-      }
-      // Single class
-      else {
-        element.classList.add(obj[prop]);
-      }
-    }
-    // Property is a data attribute (these are key-value pairs in the obj)
-    else if (prop === 'data' && typeof obj[prop] === 'object') {
-      for (let d in obj[prop]) {
-        element.dataset[d] = obj[prop][d];
-      }
-    }
-    // Any other non-special property can be set directly
-    else {
-      element[prop] = obj[prop];
-    }
-  }
-
-  return element;
-}
-
 // Create and insert articles in the page
 function populateProjects() {
-  const projectsContainer = qs('#projects .grid-container');
-  
-  for (let i = 0, len = projects.length; i < len; i += 1) {
-    const article = createElement({
+  const projectsContainer = utils.qs('#projects .grid-container');
+
+  projects.forEach((project) => {
+    const article = utils.createElement({
       tagName: 'article',
-      id: `art${projects[i].id}`
+      id: `art${project.id}`,
     });
-    if (projects[i].invisible) {
+
+    if (project.invisible) {
       article.classList.add('mobile-visible');
     }
 
-    article.appendChild(createElement({
-      tagName: 'img',
-      src: `img/projects/${projects[i].image}`,
-      alt: `Laptop project-${projects[i].id} image`
-    }));
+    article.appendChild(
+      utils.createElement({
+        tagName: 'img',
+        src: `img/projects/${project.image}`,
+        alt: `Laptop project-${project.id} image`,
+      })
+    );
 
-    const div = createElement({
-      tagName: 'div',
-      class: 'info'
+    const div = utils.createElement({
+      class: 'info',
     });
 
-    div.appendChild(createElement({
-      tagName: 'h2',
-      textContent: projects[i].title
-    }));
+    div.appendChild(
+      utils.createElement({
+        tagName: 'h2',
+        textContent: project.title,
+      })
+    );
 
-    const ul = createElement({ tagName: 'ul' });
-    for (const language of projects[i].languages) {
-      const li = createElement({ tagName: 'li' });
-      li.appendChild(createElement({
-        tagName: 'a',
-        href: '#',
-        class: 'tag'
-      }));
+    const ul = utils.createElement({ tagName: 'ul' });
+
+    project.languages.forEach((language) => {
+      const li = utils.createElement({ tagName: 'li' });
+      li.appendChild(
+        utils.createElement({
+          tagName: 'a',
+          href: '#',
+          class: 'tag',
+          textContent: language,
+        })
+      );
       ul.appendChild(li);
-    }
+    });
     div.appendChild(ul);
 
-    const a = createElement({
+    const a = utils.createElement({
       tagName: 'a',
       href: '#',
       class: ['button', 'secondary-dark'],
-      textContent: 'See this project '
+      textContent: 'See this project ',
     });
-    a.appendChild(createElement({
-      tagName: 'object',
-      data: 'img/svgs/arrow.svg',
-      width: '10',
-      height: '10'
-    }));
+    a.appendChild(
+      utils.createElement({
+        tagName: 'object',
+        data: 'img/svgs/arrow.svg',
+        width: '10',
+        height: '10',
+      })
+    );
     div.appendChild(a);
 
     article.appendChild(div);
     projectsContainer.appendChild(article);
-  }
+  });
 }
 
 populateProjects();
+
+// Listen for the click event fired by the project buttons
+utils.qs('#projects').addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const { target } = e;
+
+  if (!target.classList.contains('button')) return;
+
+  const article = target.closest('article');
+  const articleTitle = utils.qs('h2', article).textContent;
+  const project = projects.find((p) => p.title === articleTitle);
+
+  createModal(project);
+});

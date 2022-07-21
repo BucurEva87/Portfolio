@@ -1,0 +1,195 @@
+/* Variables */
+:root {
+  --primary-color: #1a2236;
+  --secondary-color: #fff;
+  --font-family1: 'Playfair Display', serif;
+  --font-family2: 'Poppins', sans-serif;
+  --mobile-padding-left-right: 1.6rem;
+  --tags-color: #98dede;
+}
+
+/* Elements */
+html {
+  font-size: 10px;
+}
+
+.modalView {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  background-color: var(--secondary-color);
+  overflow-y: auto;
+  padding: 0 2rem 2rem 2rem;
+  z-index: 100;
+}
+
+.modalContainer {
+  width: 100%;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 2.5%;
+  right: 10%;
+  cursor: pointer;
+}
+
+.modalHeading {
+  color: var(--primary-color);
+  font: 600 2.4rem/1.6rem var(--font-family2);
+  margin-top: 5.7rem;
+  margin-bottom: 2.4rem;
+}
+
+.modalLanguage {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  list-style: none;
+  margin-bottom: 1.8rem;
+}
+
+.modalLanguage li {
+  background: var(--secondary-color);
+  font: normal 1.4rem/2.2rem var(--font-family2);
+  border: 0.1rem solid var(--primary-color);
+  padding: 0.5rem;
+}
+
+.imageContainer {
+  width: 100%;
+  position: relative;
+}
+
+.modal-img1 {
+  width: 100%;
+  margin: 0;
+}
+
+.modal-sub-img {
+  display: flex;
+  justify-content: center;
+  margin-top: -0.35rem;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.modal-sub-img img {
+  width: 25%;
+}
+
+.modalView button {
+  background-color: var(--secondary-color);
+  font-weight: 500;
+  text-align: center;
+  color: var(--primary-color);
+  width: 90%;
+  font-size: 1.8rem;
+  border: 0.1rem solid var(--primary-color);
+  height: 5rem;
+  margin: 2.4rem auto 0 5%;
+}
+
+.modalView button object {
+  filter: brightness(0) saturate(100%) invert(13%) sepia(9%) saturate(2912%) hue-rotate(185deg) brightness(85%) contrast(94%);
+}
+
+.modalView button:hover {
+  border: 0.1rem solid var(--secondary-color);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.modalView button:hover object {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(10deg) brightness(97%) contrast(109%);
+}
+
+.pagination,
+.modalBackground {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .modalView {
+    width: 100vw;
+    padding: 2rem 7rem;
+    background-color: var(--primary-color);
+  }
+
+  .modalContainer {
+    /* margin: 7rem; */
+    padding: 0 6rem;
+    background-color: var(--secondary-color);;
+  }
+
+  .closeBtn {
+    position: absolute;
+    top: 15%;
+    right: 13.5rem;
+  }
+
+  .modalHeading {
+    text-align: left;
+    font: 700 6rem/4.8rem var(--font-family2);
+    padding-top: 3rem;
+  }
+
+  .modal-sub-img {
+    margin-top: -0.65rem;
+  }
+
+  .modalParagraph {
+    font: 400 1.8rem var(--font-family2);
+    padding-top: 4rem;
+    color: var(--primary-color);
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .modalView .modalBtn1 {
+    width: 22%;
+    display: inline-block;
+    margin-left: 20%;
+  }
+
+  .modalView .modalBtn2 {
+    width: 22% !important;
+    margin-left: 3rem;
+  }
+
+  .modalView button object {
+    vertical-align: middle;
+  }
+
+  .pagination {
+    padding-top: 12rem;
+    padding-bottom: 10.9rem;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  .pagination a {
+    font: 300 1.8rem/2.7rem var(--font-family2);
+    color: var(--primary-color);;
+  }
+
+  .modal-arrow-left,
+  .modal-arrow-right {
+    position: absolute;
+    top: 40%;
+    width: 5.3rem;
+    height: 2.6rem;
+  }
+
+  .modal-arrow-left {
+    left: 1%;
+  }
+
+  .modal-arrow-right {
+    right: 1%;
+  }
+}

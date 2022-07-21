@@ -1,126 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Eva-Lavinia's Portofolio</title>
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/index.js" defer></script>
-</head>
-<body>
-	
-	<header id="main-header">
-		<a id="logo" href="#" class="mobile-visible"></a>
-		<nav>
-			<ul>
-				<li class="mobile-visible"><img src="img/svgs/menuburger.svg" alt="Menu"></li>
-				<li class="mobile-visible no-display close-icon"><img src="img/svgs/menu_close.svg" alt="Menu close"></li>
-				<li class="desktop-visible"><a href="#main-header">Hello</a></li>
-				<li class="desktop-visible"><a href="#projects">Portfolio</a></li>
-				<li class="desktop-visible"><a href="#about">About</a></li>
-				<li class="desktop-visible"><a href="#contact">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eva-Lavinia's Portofolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <script type="module" src="js/index.js"></script>
+  </head>
+  <body>
+    <header id="main-header">
+      <a id="logo" href="#" class="mobile-visible"></a>
+      <nav>
+        <ul>
+          <li class="mobile-visible">
+            <img src="img/svgs/menuburger.svg" alt="Menu" />
+          </li>
+          <li class="mobile-visible no-display close-icon">
+            <img src="img/svgs/menu_close.svg" alt="Menu close" />
+          </li>
+          <li class="desktop-visible"><a href="#main-header">Hello</a></li>
+          <li class="desktop-visible"><a href="#projects">Portfolio</a></li>
+          <li class="desktop-visible"><a href="#about">About</a></li>
+          <li class="desktop-visible"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-	<section id="hero">
-		<h1>Bucur Eva-Lavinia</h1>
-		<p>Nice meeting you! My name is Eva and I work in software development. I take great pleasure in creating websites and custom features for them. Below I've listed some of my works and projects, so you can browse through them and find out if my style suits your needs. Please contact me, if you'd like to collaborate for one of your projects!</p>
-		<a class="button primary-dark">Start collaborating</a>
-	</section>
+    <section id="hero">
+      <h1>Bucur Eva-Lavinia</h1>
+      <p>
+        Nice meeting you! My name is Eva and I work in software development. I
+        take great pleasure in creating websites and custom features for them.
+        Below I've listed some of my works and projects, so you can browse
+        through them and find out if my style suits your needs. Please contact
+        me, if you'd like to collaborate for one of your projects!
+      </p>
+      <a class="button primary-dark">Start collaborating</a>
+    </section>
 
-	<div id="geometry" class="mobile-visible"></div>
+    <div id="geometry" class="mobile-visible"></div>
 
-	<section id="projects">
-		<h1 class="mobile-visible">Projects</h1>
-		<div class="grid-container">
-			<div class="desktop-visible">
-				<h1>Projects</h1>
-			</div>
-		</div>
-	</section>
+    <section id="projects">
+      <h1 class="mobile-visible">Projects</h1>
+      <div class="grid-container">
+        <div class="desktop-visible">
+          <h1>Projects</h1>
+        </div>
+      </div>
+    </section>
 
-	<section id="about">
-		<div id="about-info">
-			<h1>About</h1>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam laborum ducimus facilis dignissimos minima atque, et ullam aspernatur, ipsum, ab eum perferendis omnis minus? Rem repellat sit hic suscipit debitis!</p>
-			<a href="#" class="button primary-dark">
-				Get my CV <object data="img/svgs/download.svg" title="download icon"></object>
-			</a>
-		</div>
-		<div class="grid-container">
-			<article id="card-languages">
-				<h2>Languages</h2>
-				<ul>
-					<li>JavaScript (ES5/ES6)</li>
-					<li>Ruby</li>
-					<li>HTML</li>
-					<li>CSS</li>
-				</ul>
-			</article>
-			<article id="card-frameworks">
-				<h2>Frameworks</h2>
-				<ul>
-					<li>Bootstrap</li>
-					<li>Ruby on rails</li>
-					<li>RSpec</li>
-					<li>Capibara</li>
-					<li>Selenium</li>
-				</ul>
-			</article>
-			<article id="card-skills">
-				<h2>Skills</h2>
-				<ul>
-					<li>Codekit</li>
-					<li>Codepen</li>
-					<li>GitHub</li>
-					<li>GitLab</li>
-					<li>Terminal</li>
-				</ul>
-			</article>
-			<div id="db" class="desktop-visible"></div>
-		</div>
-	</section>
+    <section id="about">
+      <div id="about-info">
+        <h1>About</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam
+          laborum ducimus facilis dignissimos minima atque, et ullam aspernatur,
+          ipsum, ab eum perferendis omnis minus? Rem repellat sit hic suscipit
+          debitis!
+        </p>
+        <a href="#" class="button primary-dark">
+          Get my CV
+          <object data="img/svgs/download.svg" title="download icon"></object>
+        </a>
+      </div>
+      <div class="grid-container">
+        <article id="card-languages">
+          <h2>Languages</h2>
+          <ul>
+            <li>JavaScript (ES5/ES6)</li>
+            <li>Ruby</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </article>
+        <article id="card-frameworks">
+          <h2>Frameworks</h2>
+          <ul>
+            <li>Bootstrap</li>
+            <li>Ruby on rails</li>
+            <li>RSpec</li>
+            <li>Capibara</li>
+            <li>Selenium</li>
+          </ul>
+        </article>
+        <article id="card-skills">
+          <h2>Skills</h2>
+          <ul>
+            <li>Codekit</li>
+            <li>Codepen</li>
+            <li>GitHub</li>
+            <li>GitLab</li>
+            <li>Terminal</li>
+          </ul>
+        </article>
+        <div id="db" class="desktop-visible"></div>
+      </div>
+    </section>
 
-	<div id="contact-header"></div>
+    <div id="contact-header"></div>
 
-	<section id="contact">
-		<h1>Get started</h1>
-		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit quidem a velit in tempore repellendus maiores eligendi inventore corporis, laborum architecto amet tenetur beatae quos quia numquam porro, rerum commodi.</p>
-		<form action="https://formspree.io/f/xyyoqkay" method="POST">
-			<ul>
-				<li id="input-username">
-					<label for="username">Your name</label>
-					<input id="username" type="text" name="username" required maxlength="30" value="Anastasia" placeholder="Please provide your username">
-				</li>
-				<li id="input-useremail">
-					<label for="user_email">Your email</label>
-					<input id="user_email" type="email" name="user_email" required placeholder="Please provide your email address">
-				</li>
-				<li id="input-message">
-					<label for="message">Message</label>
-					<textarea id="message" name="message" required maxlength="500" placeholder="Write your message here"></textarea>
-				</li>
-				<li id="input-submit"><button type="submit" class="button primary-dark">Get in Touch</button></li>
-			</ul>
-		</form>
-	</section>
+    <section id="contact">
+      <h1>Get started</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit quidem a
+        velit in tempore repellendus maiores eligendi inventore corporis,
+        laborum architecto amet tenetur beatae quos quia numquam porro, rerum
+        commodi.
+      </p>
+      <form action="https://formspree.io/f/xyyoqkay" method="POST">
+        <ul>
+          <li id="input-username">
+            <label for="username">Your name</label>
+            <input
+              id="username"
+              type="text"
+              name="username"
+              required
+              maxlength="30"
+              value="Anastasia"
+              placeholder="Please provide your username"
+            />
+          </li>
+          <li id="input-useremail">
+            <label for="user_email">Your email</label>
+            <input
+              id="user_email"
+              type="email"
+              name="user_email"
+              required
+              placeholder="Please provide your email address"
+            />
+          </li>
+          <li id="input-message">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              maxlength="500"
+              placeholder="Write your message here"
+            ></textarea>
+          </li>
+          <li id="input-submit">
+            <button type="submit" class="button primary-dark">
+              Get in Touch
+            </button>
+          </li>
+        </ul>
+      </form>
+    </section>
 
-	<footer>
-		<a href="#">
-			<span>Get my Resume</span>
-			<object data="img/svgs/resume.svg" title="resume icon"></object>
-		</a>
-		<ul>
-			<li><a href="#"><object data="img/socials/stackoverflow.svg" title="stackoverflow social icon"></object></a></li>
-			<li><a href="#"><object data="img/socials/github.svg" title="github social icon"></object></a></li>
-			<li><a href="#"><object data="img/socials/twitter.svg" title="twitter social icon"></object></a></li>
-			<li><a href="#"><object data="img/socials/linkedin.svg" title="linkedin social icon"></object></a></li>
-			<li><a href="#"><object data="img/socials/medium.svg" title="medium social icon"></object></a></li>
-			<li><a href="#"><object data="img/socials/angellist.svg" title="angellist social icon"></object></a></li>
-		</ul>
-	</footer>
-
-</body>
+    <footer>
+      <a href="#">
+        <span>Get my Resume</span>
+        <object data="img/svgs/resume.svg" title="resume icon"></object>
+      </a>
+      <ul>
+        <li>
+          <a href="#"
+            ><object
+              data="img/socials/stackoverflow.svg"
+              title="stackoverflow social icon"
+            ></object
+          ></a>
+        </li>
+        <li>
+          <a href="#"
+            ><object
+              data="img/socials/github.svg"
+              title="github social icon"
+            ></object
+          ></a>
+        </li>
+        <li>
+          <a href="#"
+            ><object
+              data="img/socials/twitter.svg"
+              title="twitter social icon"
+            ></object
+          ></a>
+        </li>
+        <li>
+          <a href="#"
+            ><object
+              data="img/socials/linkedin.svg"
+              title="linkedin social icon"
+            ></object
+          ></a>
+        </li>
+        <li>
+          <a href="#"
+            ><object
+              data="img/socials/medium.svg"
+              title="medium social icon"
+            ></object
+          ></a>
+        </li>
+        <li>
+          <a href="#"
+            ><object
+              data="img/socials/angellist.svg"
+              title="angellist social icon"
+            ></object
+          ></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
 </html>

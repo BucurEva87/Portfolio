@@ -159,7 +159,7 @@ secondary type of button, so I implemented it */
 }
 
 #projects .grid-container {
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
 }
 
 #projects .grid-container article {
@@ -297,7 +297,7 @@ footer ul li a:hover object {
 }
 
 #about .grid-container {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   justify-content: center;
 }
 
@@ -421,6 +421,7 @@ footer > a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 
 .enlarged a {
