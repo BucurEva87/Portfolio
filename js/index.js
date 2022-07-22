@@ -151,17 +151,16 @@ const store = {
 
 utils.qs('#username').addEventListener('input', (e) => {
   store.name = e.target.value;
+  localStorage.setItem('data', JSON.stringify(store));
 });
 
 utils.qs('#user_email').addEventListener('input', (e) => {
   store.email = e.target.value;
+  localStorage.setItem('data', JSON.stringify(store));
 });
 
 utils.qs('#message').addEventListener('input', (e) => {
   store.message = e.target.value;
-});
-
-utils.qsa('#username, #user_email, #message').addEventListener('input', () => {
   localStorage.setItem('data', JSON.stringify(store));
 });
 
