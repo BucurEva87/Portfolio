@@ -21,6 +21,8 @@ burgerIcon.addEventListener('click', () => toggleBurgerMenu());
 burgerCloseIcon.addEventListener('click', () => toggleBurgerMenu());
 
 container.addEventListener('click', (e) => {
+  if (window.innerWidth >= 768) return;
+
   const { target } = e;
 
   if (target.tagName.toLowerCase() !== 'a') return;
@@ -105,6 +107,11 @@ function populateProjects() {
     article.appendChild(div);
     projectsContainer.appendChild(article);
   });
+
+  // Create the design boxes in the grid
+  for (let i = 1; i <= 3; i++) {
+    projectsContainer.appendChild(utils.createElement({ id: `design${i}` }));
+  }
 }
 
 populateProjects();
@@ -139,3 +146,36 @@ utils.qs('form').addEventListener('submit', (e) => {
   errorField.textContent = '';
   utils.qs('form').submit();
 });
+
+// Store input data inside an object that facilitates the communication
+// with the LocalStorage so that it can be retrieved for pre-filling
+// purposes
+const store = {
+  name: '',
+  email: '',
+  message: '',
+};
+
+utils.qs('#username').addEventListener('input', (e) => {
+  store.name = e.target.value;
+  localStorage.setItem('data', JSON.stringify(store));
+});
+
+utils.qs('#user_email').addEventListener('input', (e) => {
+  store.email = e.target.value;
+  localStorage.setItem('data', JSON.stringify(store));
+});
+
+utils.qs('#message').addEventListener('input', (e) => {
+  store.message = e.target.value;
+  localStorage.setItem('data', JSON.stringify(store));
+});
+
+let data = localStorage.getItem('data');
+
+if (data) {
+  data = JSON.parse(data);
+  utils.qs('#username').value = data.name;
+  utils.qs('#user_email').value = data.email;
+  utils.qs('#message').value = data.message;
+}
