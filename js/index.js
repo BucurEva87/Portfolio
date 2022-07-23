@@ -21,6 +21,8 @@ burgerIcon.addEventListener('click', () => toggleBurgerMenu());
 burgerCloseIcon.addEventListener('click', () => toggleBurgerMenu());
 
 container.addEventListener('click', (e) => {
+  if (window.innerWidth >= 768) return;
+
   const { target } = e;
 
   if (target.tagName.toLowerCase() !== 'a') return;
@@ -105,6 +107,11 @@ function populateProjects() {
     article.appendChild(div);
     projectsContainer.appendChild(article);
   });
+
+  // Create the design boxes in the grid
+  for (let i = 1; i <= 3; i++) {
+    projectsContainer.appendChild(utils.createElement({ id: `design${i}` }));
+  }
 }
 
 populateProjects();

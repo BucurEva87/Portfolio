@@ -460,6 +460,11 @@ footer > a {
 
   #main-header {
     display: block;
+    position: fixed;
+    width: 100%;
+    background-color: var(--secondary-color);
+    top: 0;
+    z-index: 99;
   }
 
   footer ul {
@@ -481,10 +486,7 @@ footer > a {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  #main-header nav ul li {
-    margin-left: 5rem;
+    gap: 5rem;
   }
 
   #main-header nav ul li a {
@@ -494,6 +496,7 @@ footer > a {
   }
 
   #hero {
+    margin-top: 7.4rem;
     padding: 0 var(--desktop-padding-left-right);
   }
 
