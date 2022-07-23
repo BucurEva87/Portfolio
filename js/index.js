@@ -122,7 +122,7 @@ utils.qs('#projects').addEventListener('click', (e) => {
 
   const { target } = e;
 
-  if (target.classList.contains('button')) return; // TODO: BUG FIX put a "!" in front of "target.classList"
+  if (!target.classList.contains('button')) return;
 
   const article = target.closest('article');
   const articleTitle = utils.qs('h2', article).textContent;
@@ -144,7 +144,7 @@ utils.qs('form').addEventListener('submit', (e) => {
   }
 
   errorField.textContent = '';
-  utils.qs('#form').submit(); // TODO: BUG FIX remove the "#"
+  utils.qs('form').submit();
 });
 
 // Store input data inside an object that facilitates the communication
@@ -171,7 +171,7 @@ utils.qs('#message').addEventListener('input', (e) => {
   localStorage.setItem('data', JSON.stringify(store));
 });
 
-let data = localStorage.getItem('dala'); // TODO: BUG FIX replace this "dala" with "data"
+let data = localStorage.getItem('data');
 
 if (data) {
   data = JSON.parse(data);
