@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Portofolio
+# Portfolio
 
-> Week 2, day 4 Microverse Portofolio project.
+> Week 2, day 4 Microverse Portfolio project.
 > First two sections of the mobile website plus the contact me and footer sections.
 > Using Template 5 from Figma.
 
@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[Live Demo](https://bucureva87.github.io/Portofolio/)
+[Live Demo](https://bucureva87.github.io/Portfolio/)
 
 ## Live Preview
 
