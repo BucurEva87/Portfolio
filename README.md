@@ -26,7 +26,7 @@
 
 - GitHub: [@BucurEva87](https://github.com/BucurEva87)
 - Twitter: [@BucurEva](https://twitter.com/BucurEva)
-- LinkedIn: [Eva Lavinia Bucur](https://www.linkedin.com/in/eva-lavinia-bucur-89626b1b7)
+- LinkedIn: [Eva Lavinia Bucur](https://www.linkedin.com/in/eva-lavinia-bucur)
 
 👤 **Edmund Yaw Debrah**
 
